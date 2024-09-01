@@ -1,16 +1,16 @@
 # Site settings
 title:          Jin
-description:    "플러터에 대한 기술 블로그..?"
-baseurl:        "/"
+description:    "Minimal Jekyll theme for storytellers"
+baseurl:        "/tale"
 url:            "https://nemesis709.github.io"
 
 # Google Analytics
-# google_analytics: UA—XXXXXXXX-X
+google_analytics: UA—XXXXXXXX-X
 
 # Author
 author:
-  name:         Jin
-  url:          https://nemesis709.github.io
+  name:         Jin Kim
+  url:          https://jin.kim
   email:        hypnos709@gmail.com
 
 # Build settings
