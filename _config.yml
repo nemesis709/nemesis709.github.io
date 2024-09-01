@@ -1,7 +1,6 @@
 # Site settings
 title:          Jin
 description:    "Minimal Jekyll theme for storytellers"
-baseurl:        "/tale"
 url:            "https://nemesis709.github.io"
 
 # Google Analytics
