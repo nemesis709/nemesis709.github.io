@@ -17,7 +17,25 @@ layout: default
     {% endif %}
   </div>
 
-  <h1 class="post-title">{{ page.title }}</h1>
+  <h1 class="post-title" id="post-title">{{ page.title }}</h1>
+
+  <style>
+    .post-title {
+      white-space: pre-line; /* 줄바꿈을 HTML처럼 처리하게 만듦 */
+    }
+  </style>
+
+  <script>
+    // 타이틀 요소 가져오기
+    var titleElement = document.getElementById("post-title");
+
+    // 현재 타이틀의 텍스트 가져오기
+    var titleContent = titleElement.innerHTML;
+
+    // ': '을 ': \n'으로 변경 (실제 줄바꿈 문자를 추가)
+    titleElement.innerHTML = titleContent.replace(/: /g, ":\n");
+  </script>
+
   <div class="post-line"></div>
 
   {{ content }}
