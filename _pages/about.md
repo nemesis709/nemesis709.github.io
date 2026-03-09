@@ -1,11 +1,9 @@
 ---
-
-## layout: post
-
-## title: "About"
-
+layout: post
+title: "About"
 author: "Jin"
 permalink: /about/
+---
 
 # 김범진 (Beomjin Kim)
 
