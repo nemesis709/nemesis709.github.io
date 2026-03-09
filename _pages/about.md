@@ -1,117 +1,213 @@
 ---
-layout: post
-title: "About"
+
+## layout: post
+
+## title: "About"
+
 author: "Jin"
 permalink: /about/
----
 
-## 안녕하세요. 김범진입니다.
+# 김범진 (Beomjin Kim)
 
-**더 좋은 아키텍처를 설계**하고 **비즈니스 가치를 실현**하는 개발자입니다.
----
+**풀스택 개발자 & 플랫폼 아키텍트**
 
-## 🎯 주요 경험
 
-### 현재 관심사
-- **AI-Powered 개발**: Claude API와 MCP를 활용한 개발 자동화 탐구
-- **개발 프로세스**: SRS, SDD, 테스트 자동화 등 효율적인 개발 방식 추구
-- **End-to-End 자동화**: 아이디어에서 배포까지 자동화 파이프라인 구축
+| 항목     | 내용                                                             |
+| ------ | -------------------------------------------------------------- |
+| 전화번호   | 010-8849-8539                                                  |
+| Email  | [hypnos709@gmail.com](mailto:hypnos709@gmail.com)              |
+| GitHub | [https://github.com/nemesis709](https://github.com/nemesis709) |
 
-### 플러터 모바일 개발
-- 클린 아키텍처 및 BLoC 패턴 기반의 확장 가능한 구조 설계
-- 국제화(i18n) 및 성능 최적화
-- FVM을 통한 플러터 버전 관리 및 멀티 버전 지원
-- 5개 이상의 프로덕션 앱 출시 및 운영
-
-### 소프트웨어 공학 및 프로세스
-- **스펙 문서 작성**: IEEE 830 기반 SRS 및 MockFlow 설계
-- **프로젝트 관리**: WBS를 통한 정확한 일정 산정 및 진척 관리
-- **요구사항 분석**: 비기능 요구사항 정의, 성능 기준 수립
-- **API 설계**: RESTful API, Swagger/OpenAPI, DBML을 활용한 문서화
-
-### 웹 개발 및 백엔드
-- React/Next.js 기반 프론트엔드 개발
-- NestJS 백엔드 API 서버 개발
-- REST API 설계 및 구현
-- 데이터베이스 설계 및 최적화
-
-### 최근 관심사 (2024년 중심)
-- **AI 자동화**: Claude API, MCP, Cursor AI를 활용한 개발 생산성 향상
-- **시스템 아키텍처**: 확장 가능하고 유지보수하기 좋은 설계
-- **개발 문화**: 팀 효율성 및 문서화 표준화
-- **온디바이스 AI**: LLM 활용, 프롬프트 엔지니어링
 
 ---
 
-## 🛠 기술 스택
+## 핵심 역량 (Core Competencies)
 
-**Core Languages**
-- Dart, TypeScript (Advanced), Python, C
-
-**Mobile Development**
-- Flutter, Android/iOS
-
-**Web Development**
-- React, Next.js
-
-**Backend Development**
-- NestJS, RESTful API
-
-**Architecture Patterns**
-- Clean Architecture, BLoC, Repository Pattern, MVVM, MVI
-
-**Design & Specification**
-- Atomic Design, Figma, Swagger/OpenAPI, DBML
-
-**AI & Automation**
-- Claude API, MCP (Model Context Protocol), Cursor AI, Gemini, Grok
-
-**DevOps & CI/CD**
-- GitHub Actions, Fastlane, Jenkins, Git, GitHub, GitLab
-
-**Software Engineering**
-- IEEE 830 SRS, WBS, API Design, Software Design Document
-
-**Interests**
-- AI-Powered Development, On-device AI, System Design, Architecture Patterns
+- **풀스택 개발**: 모바일(Flutter) → 웹(React, Next.js) → 백엔드(NestJS)로 점진적 역량 확장
+- **플랫폼 아키텍처 설계**: 멀티 앱 환경을 위한 공통 패키지(munto-core) 단독 설계 및 구축
+- **비즈니스 성장 기여**: MAU 100% 성장(12.5만 → 25만) 및 신규 서비스 런칭 주도
+- **AI 기반 개발 자동화**: Claude API, MCP를 활용한 End-to-End 개발 워크플로우 자동화
 
 ---
 
-## 📚 블로그 주요 콘텐츠
+## 기술 스택 (Technical Skill Set)
 
-이 블로그에서는 실무 경험을 바탕으로 다음과 같은 내용들을 공유하고 있습니다:
 
-### 개발 프로세스 & 소프트웨어 공학
-- **스펙 문서 작성법**: SRS(소프트웨어 요구사항 명세서)를 IEEE 830 표준에 따라 작성하는 방법
-- **프로젝트 관리**: WBS를 통한 일정 산정, 진척 관리, 리스크 관리
-- **요구사항 분석**: 비기능 요구사항 정의, 성능 기준 수립, API 설계
+| 구분                 | Skill                                                                |
+| ------------------ | -------------------------------------------------------------------- |
+| **Languages**      | Dart, TypeScript, Kotlin, Swift, Python, C                           |
+| **Mobile**         | Flutter (Expert), Android, iOS, BLoC, Riverpod                       |
+| **Web**            | React, Next.js, TypeScript                                           |
+| **Backend**        | NestJS, Flask, RESTful API                                           |
+| **AI/Automation**  | Claude API, MCP (Model Context Protocol), Cursor AI                  |
+| **Infra & DevOps** | AWS, Firebase, GitHub Actions, Fastlane                              |
+| **Architecture**   | Clean Architecture, BLoC Pattern, Layered Architecture, DDD 기반 모듈 설계 |
 
-### 플러터 모바일 개발
-- **아키텍처 패턴**: Clean Architecture, BLoC, MVVM, MVI 패턴 비교
-- **프로젝트 구조**: 확장 가능한 플러터 프로젝트 구조 설계
-- **상태관리**: 다양한 상태관리 라이브러리 비교 분석
-- **성능 최적화**: Impeller, 렌더링 최적화, 버전 관리(FVM)
-- **기술 노트**: Flutter 버전 관리, 국제화, CI/CD 자동화
-
-### 소프트웨어 설계 & 아키텍처
-- **클린 아키텍처**: 실무 적용 사례, 계층별 책임 분리, SOLID 원칙
-- **Atomic Design**: 컴포넌트 기반 설계, UI 시스템 구축
-- **API 설계**: RESTful API 설계, Swagger 문서화, DBML
-
-### AI & 자동화
-- **온디바이스 AI**: LLM 활용, Google Gemini, Ollama 통합
-- **AI-Powered 개발**: Claude API, MCP, Cursor AI 활용
-- **프롬프트 엔지니어링**: 효율적인 개발 자동화
-
-### 기술 면접 & CS 지식
-- **면접 준비**: 개발자가 알아야 할 CS 지식, 컬처핏 인터뷰
-- **개발 문화**: 팀 효율성, 개발 생산성, 협업 프로세스
 
 ---
 
-## 📞 연락처
+## 경력 사항 (Work Experience) — 총 5년
 
-- [이메일](mailto:hypnos709@gmail.com)
-- [전화](tel:01088498539)
-- [이력서](https://drive.google.com/file/d/1SM6FgcNmiyAP70FYOy0bTEpwL-7LpEaL/view?usp=share_link)
-- [포트폴리오](https://drive.google.com/file/d/1PvxZ8j5kKcKPHErKqQujSJ9AJx8nCzL8/view?usp=share_link)
+
+| 회사명     | 부서 / 직급     | 재직 기간                      | 비고            |
+| ------- | ----------- | -------------------------- | ------------- |
+| 문토      | 클라이언트팀 / 사원 | 2024.12 ~ 현재 (1년 3개월)      | 모바일 / 웹 / 백엔드 |
+| 밀크코퍼레이션 | FE 개발팀 / 사원 | 2024.06 ~ 2024.09 (4개월)    | 모바일           |
+| 세나클소프트  | 클라이언트팀 / 사원 | 2022.09 ~ 2024.03 (1년 7개월) | 모바일           |
+| 위데이터랩   | 개발팀 / 사원    | 2020.04 ~ 2022.04 (2년)     | 모바일 / 시스템     |
+
+
+---
+
+## 학력 (Education)
+
+
+| 입학 / 졸업           | 학교명    | 학과     | 비고   |
+| ----------------- | ------ | ------ | ---- |
+| 2016.03 ~ 2023.08 | 성균관대학교 | 컴퓨터공학과 | 공학학사 |
+| 2016.03 ~ 2023.08 | 성균관대학교 | 철학과    | 문학학사 |
+
+
+---
+
+## 자기소개 (About Me)
+
+저는 **혼자서 제품을 만들어낼 수 있는 개발자**입니다.
+
+기획 문서를 읽고, 디자인을 보고, API를 설계하고, 앱과 웹을 개발하고, 서버를 구축하고, 배포까지 — 제품이 세상에 나오기까지 필요한 모든 과정을 직접 수행할 수 있습니다. 
+
+문토에서는 데이팅 앱을 기존 서비스에서 분리하여 독립 런칭했고, 결제 시스템의 보안 취약점을 발견해 서버사이드로 전환하는 작업을 주도했습니다. 또한 플팻폼을 확장하기 위해 앱에서 웹까지 확장했습니다.
+
+팀에서 일할 때도 이 역량은 강점이 됩니다. 백엔드 개발자와 대화할 때 API 설계를 함께 논의할 수 있고, 기획자와 대화할 때 기술적 제약을 미리 짚어줄 수 있습니다. 전체 그림을 볼 수 있기 때문에, 내가 맡은 부분만 잘하는 것이 아니라 **제품 전체가 잘 되는 방향**으로 기여합니다.
+
+---
+
+## 주요 프로젝트 (Projects)
+
+### 1. 문토 (2024.12 ~ 현재)
+
+> **회사 소개**: 관심사 기반 소모임 플랫폼
+
+#### A. 서버사이드 결제 시스템 전환 (풀스택)
+
+
+| 항목           | 내용                                 |
+| ------------ | ---------------------------------- |
+| **핵심 성과**    | 클라이언트 → 서버사이드 결제 전환, 결제 보안 취약점 해결  |
+| **언어/프레임워크** | Flutter, React, NestJS, Postgresql |
+
+
+**문제 발견 및 해결**
+
+- 기존 클라이언트 사이드 결제의 **보안 취약점 발견** (결제 데이터 위변조 가능성)
+- 백엔드 결제 API 직접 설계 및 구현: 트랜잭션 처리, 결제 검증 로직, 환불 정책 관리
+- 클라이언트 결제 플로우 전면 개편
+- Bootpay 연동을 통한 카드 결제 및 간편 결제 구현
+
+---
+
+#### B. 비즈니스 성장 기여
+
+
+| 항목           | 내용                                     |
+| ------------ | -------------------------------------- |
+| **핵심 성과**    | MAU 100% 성장 (12.5만 → 25만), 데이팅 앱 신규 런칭 |
+| **언어/프레임워크** | Flutter, React, NestJS, Postgresql     |
+
+
+**서비스 확장**
+
+- **웹 플랫폼 구축**: Material Design 기반 반응형 웹 서비스, 모임 상세 페이지 개발로 웹 유입 채널 확보 및 실거래 유도
+- **데이팅 앱 런칭**: 기존 앱의 기능을 확장하여 앱인앱 출시, MAU 7,000명 달성
+- **munto-core 구축**: 3개 앱(문토/데이팅/어드민)에서 공유하는 공통 패키지 단독 설계 — Network/Auth, Storage, i18n, Firebase 등 12개 모듈로 구성, 앱 유지보수 극대화
+
+---
+
+#### C. AI Development Chain 구축
+
+
+| 항목           | 내용                                           |
+| ------------ | -------------------------------------------- |
+| **핵심 성과**    | 기획 → 배포까지 AI 기반 개발 파이프라인 구축, 반복 작업 시간 50% 절감 |
+| **언어/프레임워크** | Claude API, MCP, Swagger                     |
+
+
+**End-to-End 개발 자동화**
+
+- **Figma → Code**: 디자인 컴포넌트를 Flutter Widget으로 자동 변환, UI 개발 시간 단축
+- **Swagger → Code**: API 문서 기반 Model/ViewModel/Repository 보일러플레이트 자동 생성
+- **Test 자동화**: Unit Test 및 E2E Test 코드 자동 생성으로 테스트 커버리지 확보
+- **문서화 자동화**: Jira 이슈 생성, Notion/Github 문서 동기화로 커뮤니케이션 비용 감소
+
+---
+
+### 2. 세나클소프트 (2022.09 ~ 2024.03)
+
+> **회사 소개**: 환자 차트 개발 및 헬스케어 어플리케이션
+
+#### 개인 건강기록 앱 클레
+
+
+| 항목           | 내용                             |
+| ------------ | ------------------------------ |
+| **구성 인원**    | 앱 개발 3명, 기획 3명, 디자인 2명, 서버 10명 |
+| **언어/프레임워크** | Flutter, Riverpod, freezed     |
+
+
+**담당 역할**
+
+- **병원 예약/접수 시스템**: 비회원 예약 플로우 설계 및 구현, Riverpod 상태 분리와 RepaintBoundary 최적화로 렌더링 성능 개선
+- **건강 기록 기능 시각화**: 신체 측정 기록 및 생리 캘린더 구현, 데이터 시각화 차트 개발
+- **EMR 연동**: 병원 EMR 데이터 조회 및 환자 정보 관리 시스템, 민감 정보 암호화 처리
+
+---
+
+### 3. 위데이터랩 (2020.04 ~ 2022.04)
+
+> **회사 소개**: DB 모니터링 솔루션 개발
+
+#### DB 모니터링 솔루션 - 패킷 통신 모듈 개발
+
+
+| 항목          | 내용                                      |
+| ----------- | --------------------------------------- |
+| **핵심 기술**   | C 언어, 소켓 통신, 세마포어                       |
+| **프로젝트 설명** | Oracle DB 트랜잭션 로그를 실시간으로 캡처하여 타 DB에 동기화 |
+
+
+**담당 역할**
+
+- Oracle Pro*C 기반 코드 컴파일 및 실행파일 생성
+- 소켓/세마포어 통신을 이용한 실시간 로그 전송 모듈 개발
+
+---
+
+## 개인 프로젝트 (Personal Projects)
+
+### aidy - AI 음악 생성 플랫폼 (2025.04 ~ 진행중)
+
+
+| 항목        | 내용                                                |
+| --------- | ------------------------------------------------- |
+| **설명**    | 씨앗(프롬프트)을 조합해 AI 음악을 생성하고, 자신만의 음악 정원을 가꾸는 창작 플랫폼 |
+| **기술 스택** | Flutter (BLoC), FastAPI, PostgreSQL, Suno API     |
+
+
+- PRD/ERD 설계부터 백엔드 API, 앱 개발, 결제 시스템까지 **1인 풀스택 개발**
+- 씨앗 기반 경제 모델 설계: 인앱 결제 + 구독 모델로 수익화 구조 구축
+- Suno API 연동을 통한 음악 생성, AWS S3 + CloudFront 기반 음원 저장/스트리밍
+
+---
+
+### 야구 성적 시뮬레이션 ABO (2024.08 ~ 2025.01)
+
+
+| 항목        | 내용                            |
+| --------- | ----------------------------- |
+| **설명**    | 실제 KBO 경기 데이터 기반 판타지 야구 시뮬레이션 |
+| **기술 스택** | Flutter, Python, Supabase     |
+
+
+- Statiz(한국야구 통계 사이트) 크롤링으로 선수 데이터 수집 및 DB 구축
+- Supabase 기반 백엔드 구성, 점수 계산 로직 구현
+
