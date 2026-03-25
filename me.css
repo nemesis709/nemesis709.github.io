@@ -60,6 +60,14 @@ a:focus-visible {
     color: #333;
 }
 
+.mobile-break {
+    display: none;
+}
+
+.headline-separator {
+    display: inline;
+}
+
 .summary {
     margin: 0;
     max-width: 60ch;
@@ -102,6 +110,12 @@ a:focus-visible {
 
 .section {
     padding-top: 34px;
+}
+
+.section + .section {
+    margin-top: 34px;
+    border-top: 1px solid var(--line);
+    padding-top: 26px;
 }
 
 .section-title {
@@ -165,15 +179,16 @@ a:focus-visible {
 .experience-item,
 .project-item,
 .education-item {
-    padding: 26px 0;
-    border-top: 1px solid var(--line);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-.experience-item:first-child,
-.project-item:first-child,
-.education-item:first-child {
-    padding-top: 0;
-    border-top: 0;
+.experience-item + .experience-item,
+.project-item + .project-item,
+.education-item + .education-item {
+    margin-top: 26px;
+    padding-top: 26px;
+    border-top: 1px solid var(--line);
 }
 
 .item-header {
@@ -280,5 +295,27 @@ a:focus-visible {
 
     .item-period {
         white-space: normal;
+    }
+
+    .headline {
+        line-height: 1.4;
+    }
+
+    .mobile-break {
+        display: block;
+    }
+
+    .headline-separator {
+        display: none;
+    }
+
+    .meta {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .meta-item {
+        width: 100%;
     }
 }
