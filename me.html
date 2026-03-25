@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>이력서 - 김범진</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #333;
+            background: #fff;
+        }
+
+        a {
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #ccc;
+            transition: border-color 0.2s;
+        }
+
+        a:hover {
+            border-color: #333;
+        }
+
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 60px 24px 100px;
+        }
+
+        /* Header */
+        header {
+            margin-bottom: 60px;
+        }
+
+        header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        header h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        .contact-list li::before {
+            content: "· ";
+            color: #bbb;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 56px;
+        }
+
+        section>h2 {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 28px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        /* Intro */
+        .intro p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.9;
+            margin-bottom: 10px;
+        }
+
+        /* Competencies */
+        .competency-list {
+            list-style: none;
+        }
+
+        .competency-list li {
+            padding: 6px 0;
+            padding-left: 16px;
+            position: relative;
+            color: #444;
+        }
+
+        .competency-list li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: #999;
+        }
+
+        /* Skills */
+        .skill-row {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 10px;
+            align-items: baseline;
+        }
+
+        .skill-label {
+            font-size: 13px;
+            font-weight: 700;
+            color: #555;
+            min-width: 120px;
+            flex-shrink: 0;
+        }
+
+        .skill-value {
+            font-size: 14px;
+            color: #444;
+            line-height: 1.7;
+        }
+
+        /* Work Experience */
+        .company-block {
+            margin-bottom: 48px;
+        }
+
+        .company-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .company-header {
+            margin-bottom: 4px;
+        }
+
+        .company-header h3 {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        .company-meta {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 16px;
+        }
+
+        .project-block {
+            margin-bottom: 28px;
+            padding-left: 18px;
+            border-left: 2px solid #eee;
+        }
+
+        .project-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-block h4 {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .project-period {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 6px;
+        }
+
+        .project-desc {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .project-result {
+            font-size: 13px;
+            font-weight: 500;
+            color: #444;
+            margin-bottom: 6px;
+        }
+
+        .project-result span {
+            font-weight: 700;
+            color: #222;
+        }
+
+        .tech-stack {
+            font-size: 12px;
+            color: #777;
+            margin-bottom: 8px;
+        }
+
+        .tech-stack strong {
+            color: #555;
+        }
+
+        .bullet-list {
+            list-style: none;
+            margin-top: 6px;
+        }
+
+        .bullet-list li {
+            font-size: 14px;
+            color: #444;
+            padding: 3px 0 3px 14px;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .bullet-list li::before {
+            content: "–";
+            position: absolute;
+            left: 0;
+            color: #bbb;
+        }
+
+        /* Education */
+        .edu-block {
+            margin-bottom: 20px;
+        }
+
+        .edu-block h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+
+        .edu-period {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 4px;
+        }
+
+        .edu-detail {
+            font-size: 14px;
+            color: #555;
+        }
+
+        /* Personal Projects */
+        .personal-project-block {
+            margin-bottom: 36px;
+        }
+
+        .personal-project-block:last-child {
+            margin-bottom: 0;
+        }
+
+        .personal-project-block h3 {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        /* Contact */
+        .contact-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .contact-item {
+            font-size: 14px;
+            color: #444;
+            display: flex;
+            gap: 12px;
+        }
+
+        .contact-item .label {
+            font-weight: 500;
+            min-width: 80px;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            header h2 {
+                font-size: 16px;
+            }
+
+            .skill-row {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .skill-label {
+                min-width: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>김범진</h1>
+            <h2>Frontend UX Engineer · 풀스택 개발자</h2>
+            <ul class="contact-list">
+                <li><a href="mailto:hypnos709@gmail.com">hypnos709@gmail.com</a></li>
+                <li><a href="https://github.com/nemesis709" target="_blank">github.com/nemesis709</a></li>
+                <li>010-8849-8539</li>
+                <li>서울시 동작구</li>
+            </ul>
+        </header>
+
+        <section>
+            <h2>경력 사항.</h2>
+
+            <div class="company-block">
+                <div class="company-header">
+                    <h3>문토.</h3>
+                </div>
+                <p class="company-meta">클라이언트팀 · 사원 · 2024.12 – 현재</p>
+
+                <div class="project-block">
+                    <h4>서버사이드 결제 시스템 전환</h4>
+                    <p class="project-result"><span>성과</span>: 클라이언트 → 서버사이드 결제 전환, 결제 보안 취약점 해결</p>
+                    <p class="tech-stack"><strong>Tech Stack.</strong> Flutter, React, NestJS, PostgreSQL</p>
+                    <ul class="bullet-list">
+                        <li>기존 클라이언트 사이드 결제의 보안 취약점 발견 (결제 데이터 위변조 가능성)</li>
+                        <li>백엔드 결제 API 직접 설계 및 구현: 트랜잭션 처리, 결제 검증 로직, 환불 정책 관리</li>
+                        <li>클라이언트 결제 플로우 전면 개편</li>
+                        <li>Bootpay 연동을 통한 카드 결제 및 간편 결제 구현</li>
+                    </ul>
+                </div>
+
+                <div class="project-block">
+                    <h4>비즈니스 성장 기여</h4>
+                    <p class="project-result"><span>성과</span>: MAU 100% 성장 (12.5만 → 25만), 데이팅 앱 신규 런칭</p>
+                    <p class="tech-stack"><strong>Tech Stack.</strong> Flutter, React, NestJS, PostgreSQL</p>
+                    <ul class="bullet-list">
+                        <li><strong>웹 플랫폼 구축</strong>: Material Design 기반 반응형 웹 서비스, 모임 상세 페이지 개발로 웹 유입 채널 확보 및 실거래 유도
+                        </li>
+                        <li><strong>데이팅 앱 런칭</strong>: 기존 앱의 기능을 확장하여 앱인앱 출시, MAU 7,000명 달성</li>
+                        <li><strong>munto-core 구축</strong>: 3개 앱(문토/데이팅/어드민)에서 공유하는 공통 패키지 단독 설계 — Network/Auth,
+                            Storage, i18n, Firebase 등 12개 모듈로 구성</li>
+                    </ul>
+                </div>
+
+                <div class="project-block">
+                    <h4>AI Development Chain 구축</h4>
+                    <p class="project-result"><span>성과</span>: 기획 → 배포까지 AI 기반 개발 파이프라인 구축, 반복 작업 시간 40% 절감</p>
+                    <p class="tech-stack"><strong>Tech Stack.</strong> Claude API, MCP, Swagger</p>
+                    <ul class="bullet-list">
+                        <li><strong>Figma → Code</strong>: 디자인 컴포넌트를 Flutter Widget으로 자동 변환</li>
+                        <li><strong>Swagger → Code</strong>: API 문서 기반 Model/ViewModel/Repository 보일러플레이트 자동 생성</li>
+                        <li><strong>Test 자동화</strong>: Unit Test 및 E2E Test 코드 자동 생성</li>
+                        <li><strong>문서화 자동화</strong>: Jira 이슈 생성, Notion/Github 문서 동기화</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="company-block">
+                <div class="company-header">
+                    <h3>밀크코퍼레이션.</h3>
+                </div>
+                <p class="company-meta">FE 개발팀 · 사원 · 2024.06 – 2024.09 (4개월)</p>
+
+                <div class="project-block">
+                    <h4>모바일 앱 개발</h4>
+                    <p class="tech-stack"><strong>Tech Stack.</strong> Flutter</p>
+                    <ul class="bullet-list">
+                        <li>Flutter 기반 모바일 서비스 개발 및 유지보수</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="company-block">
+                <div class="company-header">
+                    <h3>세나클소프트.</h3>
+                </div>
+                <p class="company-meta">클라이언트팀 · 사원 · 2022.09 – 2024.03 (1년 7개월)</p>
+
+                <div class="project-block">
+                    <h4>개인 건강기록 앱 클레</h4>
+                    <p class="project-desc">환자 차트 개발 및 헬스케어 어플리케이션</p>
+                    <p class="tech-stack"><strong>Tech Stack.</strong> Flutter, Riverpod, freezed</p>
+                    <ul class="bullet-list">
+                        <li><strong>병원 예약/접수 시스템</strong>: 비회원 예약 플로우 설계 및 구현, Riverpod 상태 분리와 RepaintBoundary 최적화로 렌더링
+                            성능 개선</li>
+                        <li><strong>건강 기록 시각화</strong>: 신체 측정 기록 및 생리 캘린더 구현, 데이터 시각화 차트 개발</li>
+                        <li><strong>EMR 연동</strong>: 병원 EMR 데이터 조회 및 환자 정보 관리 시스템, 민감 정보 암호화 처리</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="company-block">
+                <div class="company-header">
+                    <h3>위데이터랩.</h3>
+                </div>
+                <p class="company-meta">개발팀 · 사원 · 2020.04 – 2022.04 (2년)</p>
+
+                <div class="project-block">
+                    <h4>DB 모니터링 솔루션 — 패킷 통신 모듈 개발</h4>
+                    <p class="project-desc">Oracle DB 트랜잭션 로그를 실시간으로 캡처하여 타 DB에 동기화</p>
+                    <p class="tech-stack"><strong>Tech Stack.</strong> C 언어, 소켓 통신, 세마포어</p>
+                    <ul class="bullet-list">
+                        <li>Oracle Pro*C 기반 코드 컴파일 및 실행파일 생성</li>
+                        <li>소켓/세마포어 통신을 이용한 실시간 로그 전송 모듈 개발</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro">
+            <h2>소개.</h2>
+            <p>사용자 경험·시스템 구조·개발 효율을 함께 고려하여 제품의 완성도를 높이는 프론트엔드 엔지니어입니다.</p>
+            <p>모바일과 웹을 모두 개발하며,<br>단순한 화면 구현을 넘어 상태관리 구조, 데이터 흐름, 개발 방식까지 함께 설계하는 방식으로 개발해왔습니다.</p>
+            <p>문토에서 모바일 중심 서비스를 웹으로 확장하는 과정에서는,<br>이러한 접근을 바탕으로 세 가지 축을 중심으로 시스템을 재구성했습니다.</p>
+            <p><strong>첫째, 디자인 시스템입니다.</strong><br>Material Design 3 기반의 크로스플랫폼 디자인 시스템 "Muntorial"을 설계하여,<br>Flutter와
+                React 양쪽에서 동일한 컴포넌트와 디자인 언어를 사용할 수 있도록 만들었습니다.</p>
+            <p><strong>둘째, 아키텍처입니다.</strong><br>Zustand 기반 상태관리와 MVVM 패턴을 적용하여 상태와 UI를 분리하고,<br>데이터 흐름이 명확하게 드러나는 구조를
+                설계했습니다.</p>
+            <p><strong>셋째, 개발 생산성입니다.</strong><br>Claude API와 MCP를 활용하여 개발 체인을 자동화하고,<br>반복 작업을 줄여 전체 개발 시간을 약 40%
+                단축했습니다.</p>
+        </section>
+
+        <section>
+            <h2>핵심 역량.</h2>
+            <ul class="competency-list">
+                <li><strong>풀스택 개발</strong> — 모바일(Flutter) → 웹(React, Next.js) → 백엔드(NestJS)로 점진적 역량 확장</li>
+                <li><strong>플랫폼 아키텍처 설계</strong> — 멀티 앱 환경을 위한 공통 패키지(munto-core) 단독 설계 및 구축</li>
+                <li><strong>비즈니스 성장 기여</strong> — MAU 100% 성장(12.5만 → 25만) 및 신규 서비스 런칭 주도</li>
+                <li><strong>AI 기반 개발 자동화</strong> — Claude API, MCP를 활용한 End-to-End 개발 워크플로우 자동화</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>기술 스택.</h2>
+            <div class="skill-row">
+                <span class="skill-label">Languages</span>
+                <span class="skill-value">Dart, TypeScript, Kotlin, Swift, Python, C</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Mobile</span>
+                <span class="skill-value">Flutter (Expert), Android, iOS, BLoC, Riverpod</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Web</span>
+                <span class="skill-value">React, Next.js, TypeScript, SCSS, Material Design 3</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Backend</span>
+                <span class="skill-value">NestJS, FastAPI, PostgreSQL, Supabase</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">AI / Automation</span>
+                <span class="skill-value">Claude API, MCP (Model Context Protocol), Cursor AI</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Infra & DevOps</span>
+                <span class="skill-value">AWS, Firebase, GitHub Actions, Fastlane</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Architecture</span>
+                <span class="skill-value">Clean Architecture, BLoC Pattern, Layered Architecture, DDD 기반 모듈 설계</span>
+            </div>
+        </section>
+
+        <section>
+            <h2>개인 프로젝트.</h2>
+
+            <div class="personal-project-block">
+                <h3>aidy — AI 음악 생성 플랫폼</h3>
+                <p class="project-period">2025.04 – 진행중</p>
+                <p class="project-desc">씨앗(프롬프트)을 조합해 AI 음악을 생성하고, 자신만의 음악 정원을 가꾸는 창작 플랫폼</p>
+                <p class="tech-stack"><strong>Tech Stack.</strong> Flutter (BLoC), FastAPI, PostgreSQL, Suno API</p>
+                <ul class="bullet-list">
+                    <li>PRD/ERD 설계부터 백엔드 API, 앱 개발, 결제 시스템까지 1인 풀스택 개발</li>
+                    <li>씨앗 기반 경제 모델 설계: 인앱 결제 + 구독 모델로 수익화 구조 구축</li>
+                    <li>Suno API 연동을 통한 음악 생성, AWS S3 + CloudFront 기반 음원 저장/스트리밍</li>
+                </ul>
+            </div>
+
+            <div class="personal-project-block">
+                <h3>야구 성적 시뮬레이션 ABO</h3>
+                <p class="project-period">2024.08 – 2025.01</p>
+                <p class="project-desc">실제 KBO 경기 데이터 기반 판타지 야구 시뮬레이션</p>
+                <p class="tech-stack"><strong>Tech Stack.</strong> Flutter, Python, Supabase</p>
+                <ul class="bullet-list">
+                    <li>Statiz(한국야구 통계 사이트) 크롤링으로 선수 데이터 수집 및 DB 구축</li>
+                    <li>Supabase 기반 백엔드 구성, 점수 계산 로직 구현</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>학력.</h2>
+            <div class="edu-block">
+                <h3>성균관대학교</h3>
+                <p class="edu-period">2016.03 – 2023.08</p>
+                <p class="edu-detail">철학과 문학학사</p>
+                <p class="edu-detail">컴퓨터공학과 공학학사 (복수전공)</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>연락처.</h2>
+            <div class="contact-grid">
+                <div class="contact-item">
+                    <span class="label">이메일</span>
+                    <a href="mailto:hypnos709@gmail.com">hypnos709@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="label">GitHub</span>
+                    <a href="https://github.com/nemesis709" target="_blank">github.com/nemesis709</a>
+                </div>
+                <div class="contact-item">
+                    <span class="label">전화</span>
+                    <span>010-8849-8539</span>
+                </div>
+                <div class="contact-item">
+                    <span class="label">위치</span>
+                    <span>서울시 동작구</span>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>
