@@ -1,0 +1,284 @@
+:root {
+    --text: #1b1b1b;
+    --muted: #666;
+    --light: #8a8a8a;
+    --line: #e5e5e5;
+    --accent: #111;
+    --bg: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    line-height: 1.75;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid #cfcfcf;
+}
+
+a:hover {
+    border-color: #777;
+}
+
+a:focus-visible {
+    outline: 2px solid #bbb;
+    outline-offset: 3px;
+}
+
+.page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 56px 24px 80px;
+}
+
+.header {
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--line);
+}
+
+.name {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+}
+
+.headline {
+    margin: 10px 0 18px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #333;
+}
+
+.summary {
+    margin: 0;
+    max-width: 60ch;
+    font-size: 15px;
+    color: #444;
+}
+
+.summary + .summary {
+    margin-top: 10px;
+}
+
+.about-copy {
+    max-width: none;
+}
+
+.meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin-top: 18px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.meta-item img {
+    width: 14px;
+    height: 14px;
+    display: block;
+}
+
+.meta-item a {
+    border-bottom: 0;
+}
+
+.section {
+    padding-top: 34px;
+}
+
+.section-title {
+    margin: 0 0 18px;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list li {
+    position: relative;
+    padding-left: 16px;
+    font-size: 15px;
+    color: #444;
+}
+
+.list li + li {
+    margin-top: 10px;
+}
+
+.list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 11px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #999;
+}
+
+.skills {
+    display: grid;
+    gap: 12px;
+}
+
+.skill-row {
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 14px;
+    align-items: start;
+}
+
+.skill-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+
+.skill-value {
+    font-size: 14px;
+    color: #555;
+}
+
+.experience-item,
+.project-item,
+.education-item {
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+}
+
+.experience-item:first-child,
+.project-item:first-child,
+.education-item:first-child {
+    padding-top: 0;
+    border-top: 0;
+}
+
+.item-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.item-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+}
+
+.title-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.icon-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    color: var(--muted);
+}
+
+.icon-link:hover {
+    border-color: #999;
+    color: var(--text);
+}
+
+.icon-link img {
+    width: 13px;
+    height: 13px;
+    display: block;
+}
+
+.item-subtitle {
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.item-period {
+    flex-shrink: 0;
+    font-size: 13px;
+    color: var(--light);
+    white-space: nowrap;
+}
+
+.item-summary {
+    margin: 14px 0 0;
+    font-size: 15px;
+    color: #3f3f3f;
+}
+
+.item-meta {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.item-highlights {
+    margin-top: 14px;
+}
+
+.footer-note {
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--muted);
+}
+
+@media (max-width: 720px) {
+    .page {
+        padding: 32px 18px 56px;
+    }
+
+    .name {
+        font-size: 32px;
+    }
+
+    .item-header,
+    .skill-row {
+        grid-template-columns: 1fr;
+        display: grid;
+        gap: 4px;
+    }
+
+    .item-period {
+        white-space: normal;
+    }
+}
