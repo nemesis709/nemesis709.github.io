@@ -1,0 +1,300 @@
+.page {
+    max-width: 1120px;
+}
+
+.name {
+    font-size: 42px;
+}
+
+.portfolio-title {
+    margin: 0;
+    font-size: 34px;
+    line-height: 1.3;
+    letter-spacing: -0.04em;
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #767676;
+}
+
+.intro-copy {
+    max-width: 72ch;
+    margin-top: 18px;
+}
+
+.portfolio-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 18px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #505050;
+}
+
+.case-study + .case-study {
+    margin-top: 36px;
+    padding-top: 36px;
+    border-top: 1px solid var(--line);
+}
+
+.diagram-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.diagram-card {
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.single-diagram {
+    margin-top: 22px;
+}
+
+.diagram-title {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #2f2f2f;
+}
+
+.sequence-steps {
+    display: grid;
+    gap: 10px;
+}
+
+.sequence-step {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: #f7f7f7;
+    color: #303030;
+    font-size: 14px;
+}
+
+.sequence-step span {
+    flex-shrink: 0;
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: #e9e9e9;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+}
+
+.danger-step {
+    background: #fff1f1;
+    color: #8f2f2f;
+}
+
+.danger-step span {
+    background: #ffd9d9;
+    color: #8f2f2f;
+}
+
+.success-step {
+    background: #f1f7f3;
+    color: #2f6a41;
+}
+
+.success-step span {
+    background: #d8eadf;
+    color: #2f6a41;
+}
+
+.core-layout {
+    display: grid;
+    gap: 16px;
+}
+
+.core-apps,
+.core-modules {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.core-app-node,
+.core-module,
+.core-center {
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.core-app-node {
+    background: #f7f7f7;
+    color: #333;
+    font-weight: 700;
+}
+
+.core-center {
+    background: #f0f0f0;
+    color: #222;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.core-module {
+    background: #f7f7f7;
+    color: #444;
+    font-weight: 600;
+}
+
+.diagram-caption {
+    margin: 14px 0 0;
+    font-size: 14px;
+    color: #4c4c4c;
+}
+
+.case-header {
+    display: block;
+}
+
+.case-title {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.35;
+    letter-spacing: -0.04em;
+}
+
+.case-meta {
+    margin: 10px 0 0;
+    font-size: 13px;
+    color: var(--light);
+}
+
+.case-summary {
+    margin: 16px 0 0;
+    max-width: none;
+    font-size: 16px;
+    color: #3d3d3d;
+}
+
+.image-strip {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.image-card {
+    margin: 0;
+    padding: 12px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fff;
+}
+
+.image-card img {
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+}
+
+.image-card figcaption {
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    text-align: center;
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.case-block {
+    padding: 18px 20px;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: #fafafa;
+}
+
+.case-block-title {
+    margin: 0 0 8px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #2f2f2f;
+}
+
+.case-block-copy {
+    margin: 0;
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+.case-block .list li {
+    font-size: 15px;
+}
+
+code {
+    padding: 1px 4px;
+    border-radius: 4px;
+    background: #f1f1f1;
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+    font-size: 0.92em;
+}
+
+@media (max-width: 840px) {
+    .case-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diagram-pair {
+        grid-template-columns: 1fr;
+    }
+
+    .image-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .core-apps,
+    .core-modules {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 720px) {
+    .name {
+        font-size: 32px;
+    }
+
+    .portfolio-title {
+        font-size: 26px;
+    }
+
+    .case-header {
+        display: block;
+    }
+
+    .case-title {
+        font-size: 24px;
+    }
+
+    .case-meta {
+        margin-top: 8px;
+    }
+
+    .case-block {
+        padding: 16px;
+    }
+}
