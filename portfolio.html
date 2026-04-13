@@ -66,30 +66,9 @@
                     <div>
                         <h3 class="case-title">앱 전환 중심 구조를 웹 완결형 사용자 경험으로 재구성한 사례</h3>
                     </div>
-                </div>
-                <p class="visual-flow-caption">메인 화면 기준으로 기존 앱과 신규 웹(모바일/데스크톱) 비교</p>
-                <div class="image-strip munto-comparison-strip">
-                    <figure class="image-card">
-                        <img src="./assets/images/munto_app_main.png" alt="기존 문토 앱 메인 화면" />
-                        <figcaption>기존 앱 메인화면</figcaption>
-                    </figure>
-                    <figure class="image-card">
-                        <img src="./assets/images/munto_web_main.png" alt="신규 문토 웹 모바일 메인 화면" />
-                        <figcaption>신규 웹 모바일 메인화면</figcaption>
-                    </figure>
-                    <figure class="image-card">
-                        <img src="./assets/images/munto_desktop_main.png" alt="신규 문토 웹 데스크톱 메인 화면" />
-                        <figcaption>신규 웹 데스크톱 메인화면</figcaption>
-                    </figure>
+                    <p class="case-meta">웹 확장 · Web MAU 8만 → 12만 · 전체 MAU 25만+</p>
                 </div>
                 <div class="case-grid">
-                    <div class="case-block">
-                        <h4 class="case-block-title">배경</h4>
-                        <p class="case-block-copy">
-                            모바일 서비스는 충분히 성장했지만, 웹은 소개 페이지 역할에 머물러 있었습니다. 로그인 상태나 회원 프로필,
-                            결제 같은 실제 서비스 플로우가 웹에는 없었기 때문에 유입 이후 사용자가 머물 이유가 부족했습니다.
-                        </p>
-                    </div>
                     <div class="case-block">
                         <h4 class="case-block-title">문제 인식</h4>
                         <p class="case-block-copy">
@@ -99,7 +78,16 @@
                         </p>
                     </div>
                     <div class="case-block">
-                        <h4 class="case-block-title">개선 방식</h4>
+                        <h4 class="case-block-title">분석</h4>
+                        <p class="case-block-copy">
+                            단순히 랜딩 페이지를 개선하는 것만으로는 전환 문제를 해결하기 어렵다고 판단했습니다. 웹만으로 서비스를 이용하고 싶은 수요가
+                            이미 있었고, 실제 전환을 만들려면 웹도 앱처럼 로그인 이후 탐색과 결제까지 이어지는 완결된 구조를 가져야 했습니다.
+                            또 웹과 앱 URI가 분리된 상태로는 기능을 늘릴수록 유지보수 비용이 커질 수밖에 없어서, 상태관리와 라우팅 체계까지 함께 정리하는
+                            방향으로 접근했습니다.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block-title">실행</h4>
                         <ul class="list">
                             <li>앱 소개 중심이던 웹을 실제 서비스 진입점으로 바꾸고, 탐색부터 결제까지 이어지는 흐름을 웹 안에서 완결할 수 있도록 재구성했습니다.</li>
                             <li>로그인 상태와 서비스 데이터를 안정적으로 다룰 수 있는 상태 관리 구조를 정리해 주요 화면 경험을 일관되게 맞췄습니다.</li>
@@ -143,39 +131,46 @@
                     <div>
                         <h3 class="case-title">이중결제 이슈를 해소하기 위해 결제 흐름을 서버 중심으로 재설계한 사례</h3>
                     </div>
+                    <p class="case-meta">서버사이드 아키텍처 전환</p>
                 </div>
                 <div class="case-grid">
-                    <div class="case-block">
-                        <h4 class="case-block-title">배경</h4>
-                        <p class="case-block-copy">
-                            기존 주문 흐름은 클라이언트 중심 결제 구조였고, 결제가 끝난 뒤 주문 데이터와 결제 데이터가 함께 생성되는 방식이었습니다.
-                            결제 확정의 마지막 책임이 클라이언트에 남아 있는 구조였습니다.
-                        </p>
-                    </div>
                     <div class="case-block">
                         <h4 class="case-block-title">문제 인식</h4>
                         <p class="case-block-copy">
                             결제 도중 이탈이나 중복 요청이 발생하면 이중결제와 결제 완료/주문 미기록 상태가 함께 생길 위험이 있었습니다.
-                            주문 금액을 클라이언트 요청에 의존하는 구간이 남아 있어 금액 위변조 가능성이 있었고, 유료와 무료 주문의 처리 방식이 달라 주문/결제 데이터 정합성도 흔들릴 수 있었습니다.
+                            주문 금액을 클라이언트 요청에 의존하는 구간이 남아 있어 금액 위변조 가능성이 있었고, 유료와 무료 주문의 처리 방식이 달라 주문/결제 데이터 정합성도 흔들릴 수
+                            있었습니다.
                         </p>
                     </div>
                     <div class="case-block">
-                        <h4 class="case-block-title">개선 방식</h4>
+                        <h4 class="case-block-title">분석</h4>
+                        <p class="case-block-copy">
+                            스케줄러로 사후 환불을 보정하는 방식만으로는 결제와 주문 사이 불일치를 근본적으로 해결하기 어렵다고 판단했습니다.
+                            결제 성공 이후에 주문을 만드는 구조에서는 예외 상황이 생길 때마다 복구 비용이 커졌고, 무료 주문처럼 payment 레코드가
+                            생기지 않는 경우에는 테이블 책임도 모호했습니다. 그래서 결제 로직을 API 한두 개 더 붙이는 수준이 아니라,
+                            주문 생성과 결제 확정의 책임을 서버 기준으로 다시 설계해야 한다고 봤습니다.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block-title">실행</h4>
                         <ul class="list">
-                            <li>기존 클라이언트 중심 결제 구조에서 서버 중심 결제 구조로 전환하고, 주문 생성과 결제 확정을 분리해 결제 책임을 서버로 이관했습니다.</li>
-                            <li>주문 생성 단계에서 서버 계산 금액과 클라이언트 요청 금액을 먼저 대조하고, Redis 결제 세션으로 무결성 검증을 추가했습니다.</li>
-                            <li>서버에 <code>WAITING_PAYMENT</code> 상태를 도입해 결제 시도 단위의 주문번호를 먼저 고정하고, 재시도·재진입에도 동일 주문으로 처리되도록 멱등성을 보장했습니다.</li>
-                            <li>Bootpay confirm 타임아웃 시 <code>PROCESSING</code> 응답과 상태 조회 폴링 흐름을 추가해, 이탈 후 재진입해도 같은 주문번호 기준으로 결제 상태를 이어서 확인할 수 있게 했습니다.</li>
-                            <li>유료/무료 주문을 분리 처리하되, 무료 주문에서도 결제 레코드 정합성이 유지되도록 동일한 데이터 규칙을 적용했습니다.</li>
+                            <li>주문 생성과 결제 확정의 책임을 서버가 갖는 구조로 결제 플로우를 다시 설계했습니다.</li>
+                            <li>주문 생성 단계에서 서버가 계산한 최종 금액과 클라이언트 요청 금액을 먼저 검증하고, 이후 Redis 세션의 가격 정보로 한 번 더 검증했습니다.</li>
+                            <li>주문 생성과 결제 확정을 분리하고, 사용자/도메인/가격을 기준으로 결제 세션을 검증하는 서버 기준 플로우로 바꿨습니다.</li>
+                            <li>Bootpay confirm 타임아웃 시 <code>PROCESSING</code> 응답을 반환하고, 주문 상태 조회 API로 폴링할 수 있는 흐름을
+                                추가했습니다.</li>
+                            <li><code>WAITING_PAYMENT</code>, <code>COMPLETED_PAYMENT</code> 같은 상태 전이를 서버 기준으로 재정리했습니다.
+                            </li>
+                            <li>CARD 결제와 FREE 주문을 분기 처리해 무료 주문은 Bootpay 검증 없이 완료하고, 무료 주문에서도 정합성이 깨지지 않도록 로직을 수정했습니다.
+                            </li>
                         </ul>
                     </div>
                     <div class="case-block">
                         <h4 class="case-block-title">결과</h4>
                         <ul class="list">
-                            <li>결제 진행 중 상태를 서버에서 관리하면서, 이탈 후 재진입 시 같은 주문번호로 상태를 이어갈 수 있는 구조를 만들었습니다.</li>
-                            <li>결제 확정 책임이 서버로 이동하면서 이중결제와 결제 완료 후 주문이 기록되지 않는 상태를 구조적으로 줄였습니다.</li>
-                            <li>유료/무료 주문 모두에서 주문/결제 데이터 정합성을 일관되게 유지할 수 있는 기준을 만들었습니다.</li>
-                            <li>타임아웃이나 지연 상황에서도 주문 상태를 추적할 수 있어 결제 운영 안정성과 대응 속도를 높였습니다.</li>
+                            <li>반복적으로 발생하던 중복 결제 이슈를 해결했습니다.</li>
+                            <li>서버사이드 결제 구조 릴리즈 이후 동일 이슈가 재발하지 않았습니다.</li>
+                            <li>주문과 결제 데이터의 책임이 분명해졌고 예외 상황을 서버 기준으로 다룰 수 있게 됐습니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -189,7 +184,8 @@
                             <div class="sequence-step danger-step"><span>4</span> Client → PG Provider: 즉시 결제 확정</div>
                             <div class="sequence-step"><span>5</span> PG Provider → Client: receiptId 전달</div>
                             <div class="sequence-step"><span>6</span> Client → Backend: 검증 및 DB 저장 요청</div>
-                            <div class="sequence-step danger-step"><span>7</span> 이 구간에서 실패하면 결제 완료 / 주문 미기록 상태가 남음</div>
+                            <div class="sequence-step danger-step"><span>7</span> 이 구간에서 실패하면 결제 완료 / 주문 미기록 상태가 남음
+                            </div>
                         </div>
                     </div>
                     <div class="diagram-card">
@@ -214,41 +210,48 @@
                     <div>
                         <h3 class="case-title">서비스 확장에 대비해 공통 코어 패키지와 초기화 구조를 표준화한 사례</h3>
                     </div>
+                    <p class="case-meta">공통 기반 패키지 설계</p>
                 </div>
+                <p class="case-summary">
+                    데이팅 기능이 별도 패키지로 분리되고 채팅 SDK까지 붙으면서, 새 기능이나 새 제품이 생길 때마다 인증, 로깅, 저장소,
+                    네트워크 같은 기반 코드를 다시 만들어야 하는 상황이 됐습니다. 이 문제를 해결하기 위해 공통 인프라를 별도 패키지로
+                    분리하고, 서비스별 구현은 그 위에 얹는 구조를 설계했습니다.
+                </p>
                 <div class="case-grid">
-                    <div class="case-block">
-                        <h4 class="case-block-title">배경</h4>
-                        <p class="case-block-copy">
-                            문토 안의 부가 기능 수준이던 데이팅을 별도 서비스로 확장하면서, 로거, 국제화, 네트워크 같은 기반 모듈을
-                            서비스별로 반복 구현하지 않고 공통화할 필요가 커졌습니다.
-                        </p>
-                    </div>
                     <div class="case-block">
                         <h4 class="case-block-title">문제 인식</h4>
                         <p class="case-block-copy">
-                            공통 기능이 서비스별로 분산된 상태에서는 같은 사용자 행동에도 서비스마다 인증, 로깅, 네트워크 동작이 달라질 위험이 컸고,
-                            Crashlytics 이벤트 수집 방식과 개발/프로덕션 빌드 설정이 서비스마다 달라, 장애 원인 추적과 릴리즈 검증 기준을 통일하기 어려웠습니다.
-                            데이팅을 신규 서비스로 출시하는 시점에 구조를 정리하지 않으면
-                            이후 서비스 확장 때마다 공통 모듈을 다시 구현해야 해 출시 속도와 품질이 함께 떨어질 수 있었습니다.
+                            인증, 토큰, 로깅, 저장소, 인터셉터 같은 기반 기능이 여러 코드베이스에 흩어져 있으면
+                            같은 성격의 보일러플레이트가 반복되고 초기화 충돌 위험도 함께 커집니다. 서비스가 늘어날수록 기능 개발보다
+                            공통 인프라를 다시 맞추는 비용이 먼저 커지는 구조였습니다.
                         </p>
                     </div>
                     <div class="case-block">
-                        <h4 class="case-block-title">개선 방식</h4>
+                        <h4 class="case-block-title">분석</h4>
+                        <p class="case-block-copy">
+                            단순히 파일을 한 폴더로 모으는 정도로는 다음 서비스 분리 때 같은 문제를 다시 겪게 된다고 판단했습니다.
+                            공통화의 기준을 유틸 함수가 아니라 제품이 공통으로 기대하는 클라이언트 인프라로 잡아야, 새 패키지가 추가돼도
+                            인증 방식, 로깅 규칙, 초기화 순서가 흔들리지 않는 구조를 만들 수 있었습니다. 그래서 코어는 공통 인프라를 책임지고,
+                            앱과 패키지는 비즈니스 구현만 얹는 방향으로 계층을 나눴습니다.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block-title">실행</h4>
                         <ul class="list">
-                            <li>앱 분리를 염두에 두고 공통 패키지 <code>munto-core</code>를 설계했습니다.</li>
-                            <li>App, Device, Environment, Storage, Logger, Token, i18n, Network, Firebase, Sendbird를 공통 기반으로 분리했습니다.</li>
-                            <li>코어 초기화와 앱별 초기화를 분리해 서비스 간 초기화 충돌을 줄일 수 있는 구조로 정리했습니다.</li>
-                            <li>결제, 본인인증, 국제화처럼 서비스별로 달라질 수 있는 영역은 인터페이스와 구현체를 분리해 교체 가능하도록 구성했습니다.</li>
-                            <li>토큰 관리는 서비스별 보관 방식이 아니라 공통 토큰 서비스 기준으로 일원화해 인증 동작의 일관성을 확보했습니다.</li>
-                            <li>로거는 코어에서 로그 레벨과 출력 경로를 표준화하고, 레벨+아웃풋 조합에 따라 Fatal 로그를 Crashlytics로 전달하는 등 처리 경로를 분리해 운영 목적에 맞게 확장할 수 있도록 설계했습니다.</li>
+                            <li>새 제품이나 SDK가 붙어도 공통 기반을 그대로 재사용할 수 있도록 <code>munto-core</code> 패키지를 설계했습니다.</li>
+                            <li>저장소, 토큰, 로깅, 국제화, 네트워크, 채팅 SDK처럼 반복 구현되던 기능을 코어 계층으로 옮겼습니다.</li>
+                            <li><code>CoreDependencyInjection</code>을 중심으로 공통 인프라 초기화와 서비스별 초기화를 분리했습니다.</li>
+                            <li>Logger, 결제, 본인인증은 인터페이스와 구현체를 분리해 서비스별로 교체 가능하도록 설계했습니다.</li>
+                            <li>문토, 데이팅, 채팅이 같은 사용자 인증 상태를 공유할 수 있도록 토큰 관리를 공통 <code>TokenService</code>로 통합하는 방향으로
+                                설계했습니다.</li>
                         </ul>
                     </div>
                     <div class="case-block">
                         <h4 class="case-block-title">결과</h4>
                         <ul class="list">
-                            <li>문토 앱과 데이팅 서비스가 공유하는 기반 기능의 책임을 한 곳으로 모을 수 있는 구조를 만들었습니다.</li>
-                            <li>공통 기능 수정 시 영향 범위를 줄이고 서비스별 코드 경계를 더 명확하게 만들었습니다.</li>
-                            <li>단순한 코드 이동이 아니라, 제품 경계와 초기화 계층을 기준으로 공통 코어를 설계하는 경험을 쌓았습니다.</li>
+                            <li>새 패키지나 SDK를 붙일 때 인증, 로깅, 저장소, 네트워크 코드를 처음부터 다시 만드는 비용을 줄일 수 있는 기반을 만들었습니다.</li>
+                            <li>공통 기능 수정이 필요할 때 여러 코드베이스를 동시에 손보지 않고 코어 계층에서 일관되게 관리할 수 있는 구조를 갖췄습니다.</li>
+                            <li>서비스별 비즈니스 코드와 공통 인프라의 경계를 분리해, 제품 분리와 확장을 더 낮은 비용으로 진행할 수 있게 했습니다.</li>
                         </ul>
                     </div>
                 </div>
@@ -257,8 +260,10 @@
                         <h4 class="diagram-title">Before</h4>
                         <div class="sequence-steps">
                             <div class="sequence-step"><span>1</span> Munto App과 Dating 서비스가 공통 기반 기능을 각각 별도 구현</div>
-                            <div class="sequence-step"><span>2</span> Logger, i18n, Network Interceptor, Crashlytics 이벤트 스키마 중복 증가</div>
-                            <div class="sequence-step danger-step"><span>3</span> 토큰 관리, 로깅, DI 초기화, 빌드 설정(dev/prod) 방식이 서로 다른 구조로 굳어짐</div>
+                            <div class="sequence-step"><span>2</span> Logger, i18n, Network Interceptor, Crashlytics 이벤트
+                                스키마 중복 증가</div>
+                            <div class="sequence-step danger-step"><span>3</span> 토큰 관리, 로깅, DI 초기화, 빌드 설정(dev/prod) 방식이
+                                서로 다른 구조로 굳어짐</div>
                             <div class="sequence-step danger-step"><span>4</span> 새 서비스 추가 시 복제 비용과 충돌 위험 증가</div>
                         </div>
                     </div>
@@ -286,6 +291,7 @@
                     <div>
                         <h3 class="case-title">서로 다른 데이터 모델을 일관된 인터랙티브 차트 경험으로 통합한 사례</h3>
                     </div>
+                    <p class="case-meta">차트 시스템 설계</p>
                 </div>
                 <div class="image-strip chart-crop-strip">
                     <figure class="image-card">
@@ -303,13 +309,6 @@
                 </div>
                 <div class="case-grid">
                     <div class="case-block">
-                        <h4 class="case-block-title">배경</h4>
-                        <p class="case-block-copy">
-                            사용자에게는 하나의 건강 기록 경험처럼 보여야 했지만, 실제 데이터는 타입마다 형식과 표현 범위가 달랐습니다.
-                            상단 그래프는 줌인, 줌아웃, 스와이프, 날짜 선택까지 가능한 인터랙션을 가져야 했습니다.
-                        </p>
-                    </div>
-                    <div class="case-block">
                         <h4 class="case-block-title">문제 인식</h4>
                         <p class="case-block-copy">
                             데이터 타입별로 화면을 따로 만들면 지표마다 계산 로직, 렌더링 방식, 인터랙션 처리가 분리되어
@@ -318,12 +317,20 @@
                         </p>
                     </div>
                     <div class="case-block">
-                        <h4 class="case-block-title">개선 방식</h4>
+                        <h4 class="case-block-title">분석</h4>
+                        <p class="case-block-copy">
+                            데이터 종류마다 화면을 따로 만드는 방식은 처음엔 빠를 수 있어도, 건강 데이터가 늘어날수록 차트 로직과 UX가 쉽게 분기될 수 있다고 봤습니다.
+                            또 서버 DTO를 그대로 UI에 연결하면 데이터 타입이 늘어날 때마다 화면과 렌더링 로직이 함께 흔들릴 수 있었습니다.
+                            그래서 DTO와 앱 모델을 분리하고, 공통 차트 모델과 더 낮은 렌더링 레이어를 먼저 설계하는 쪽이 재사용성과 UX 일관성 모두에 유리하다고 판단했습니다.
+                        </p>
+                    </div>
+                    <div class="case-block">
+                        <h4 class="case-block-title">실행</h4>
                         <ul class="list">
-                            <li>차트 화면을 지표별 페이지가 아니라 공통 차트 엔진으로 설계하고, 데이터는 공통 모델로 변환해 주입하는 구조로 바꿨습니다.</li>
-                            <li>혈압처럼 범위값이 필요한 지표와 체중처럼 단일값 지표를 모두 같은 입력 규칙으로 수용할 수 있게 데이터 스펙을 정리했습니다.</li>
-                            <li>렌더링과 인터랙션 로직을 공통 레이어로 분리해 줌, 스와이프, 날짜 선택 경험이 지표와 무관하게 동일하게 동작하도록 맞췄습니다.</li>
-                            <li>새로운 지표가 들어와도 화면을 새로 만들지 않고, 변환 규칙만 추가하면 기존 차트 흐름에 바로 탑재할 수 있게 구성했습니다.</li>
+                            <li>서버 DTO와 앱 모델 레이어를 분리하고, 팩토리 메소드 기반으로 데이터별 모델을 공통 차트 모델로 변환하는 구조를 설계했습니다.</li>
+                            <li>혈압의 min/max 값과 혈당·체중의 single value처럼 형태가 다른 데이터도 같은 렌더링 구조에서 처리할 수 있도록 설계했습니다.</li>
+                            <li><code>CustomPainter</code>와 <code>GestureDetector</code> 기반으로 차트 렌더링과 줌/스와이프 인터랙션을 직접
+                                구현했습니다.</li>
                         </ul>
                     </div>
                     <div class="case-block">

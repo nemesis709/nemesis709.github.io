@@ -52,23 +52,14 @@
 .case-toc-list li {
     color: #4b4b4b;
     font-size: 14px;
-}
-
-.case-toc-list a {
-    border-bottom: 0;
-    color: inherit;
-}
-
-.case-toc-list a:hover {
-    text-decoration: underline;
-    text-underline-offset: 2px;
+    color: #505050;
 }
 
 .case-study {
     scroll-margin-top: 20px;
 }
 
-.case-study + .case-study {
+.case-study+.case-study {
     margin-top: 36px;
     padding-top: 36px;
     border-top: 1px solid var(--line);
@@ -273,39 +264,44 @@
 }
 
 .case-grid {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
     margin-top: 22px;
 }
 
 .case-block {
-    padding: 0;
-    border: 0;
-    border-radius: 0;
+    display: grid;
+    grid-template-columns: 120px minmax(0, 1fr);
+    gap: 20px;
+    padding: 18px 0;
+    border-top: 1px solid var(--line);
     background: transparent;
 }
 
-.case-block + .case-block {
-    margin-top: 22px;
-    padding-top: 18px;
-    border-top: 1px solid #ececec;
-}
-
 .case-block-title {
-    margin: 0 0 10px;
-    font-size: 20px;
+    margin: 0;
+    font-size: 14px;
     font-weight: 800;
-    letter-spacing: -0.02em;
-    color: #1f1f1f;
+    color: #2f2f2f;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
 }
 
 .case-block-copy {
     margin: 0;
-    font-size: 16px;
-    color: #3f3f3f;
+    font-size: 15px;
+    color: #4a4a4a;
+    line-height: 1.8;
+}
+
+.case-block .list {
+    margin: 0;
 }
 
 .case-block .list li {
-    font-size: 16px;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
 code {
@@ -317,8 +313,10 @@ code {
 }
 
 @media (max-width: 840px) {
-    .munto-comparison-strip {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+    .case-block {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        padding: 16px 0;
     }
 
     .diagram-pair {
@@ -361,6 +359,6 @@ code {
     }
 
     .case-block {
-        padding: 16px;
+        padding: 14px 0;
     }
 }
