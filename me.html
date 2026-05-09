@@ -18,8 +18,6 @@
     <main class="page">
         <header class="header">
             <h1 class="name">김범진</h1>
-            <p class="headline">Frontend Engineer<span class="headline-separator"> ·</span><br class="mobile-break" />
-                Product-minded Developer</p>
             <div class="meta">
                 <span class="meta-item">
                     <img src="./assets/icons/profile.svg" alt="" />
@@ -59,7 +57,7 @@
                 </div>
                 <div class="skill-row">
                     <div class="skill-label">Automation</div>
-                    <div class="skill-value">Claude API, MCP, Figma/Swagger 기반 코드 생성, 테스트/문서화 자동화</div>
+                    <div class="skill-value">Claude API, MCP, AI Agent Harness, Figma/Swagger 기반 코드 생성, 테스트/문서화 자동화</div>
                 </div>
                 <div class="skill-row">
                     <div class="skill-label">Others</div>
@@ -98,7 +96,7 @@
                     <div class="item-period">2024.12 - Present</div>
                 </div>
                 <p class="item-summary">
-                    모바일 중심 서비스의 웹 확장 과정에서 디자인 시스템, 상태관리, 결제 구조, 개발 자동화 재설계</p>
+                    모바일 중심 서비스의 웹 확장 과정에서 디자인 시스템, 상태관리, 결제 구조, 표준 개발 프로세스 정립과 AI 에이전트 하네스 구축</p>
                 <p class="item-meta impact-line">웹 MAU 8만 → 12만(50% 성장), 전체 MAU 25만+</p>
                 <ul class="list item-highlights">
                     <li>Material Design 3 기반 디자인 시스템 <strong>Muntorial</strong> 설계 및 구축</li>
@@ -107,7 +105,8 @@
                     <li>웹 동영상 스트리밍 페이지 개발, <strong>웹/앱 공용 크로스플랫폼 구조</strong> 구성</li>
                     <li>React Query 캐시 중심 서버 상태 관리, 환경값/UI 상태 훅 기반 로컬 상태로 분리</li>
                     <li><strong>서버사이드 결제 구조</strong>로 전환하며 결제 검증, 트랜잭션 처리, 환불 정책 로직 서버 기준으로 설계 및 구현</li>
-                    <li>Claude API, MCP 기반 코드 생성/테스트/문서화 자동화 구축하여 작업 시간 약 40% 단축</li>
+                    <li>기획/SRS → WBS → 설계 → 구현 → 검증으로 이어지는 표준 개발 프로세스 정립</li>
+                    <li>Claude, Cursor, Codex 등 어떤 AI 에이전트에서도 동일한 개발 흐름을 재현할 수 있는 하네스 구축, 산출물 완성 시간 기준 개발 효율 약 60% 개선</li>
                 </ul>
             </article>
 
@@ -255,20 +254,19 @@
         <section class="section">
             <h2 class="section-title">About Me</h2>
             <p class="summary about-copy">
-                저는 사용자 경험을 중심으로 제품을 구현하는 프론트엔드 개발자입니다. Flutter 기반 모바일 개발에서 시작해
-                React와 Next.js 기반 웹 개발까지 확장했고, 디자인 시스템, 상태관리 구조, 반응형 UI, 인터랙션 구현처럼
-                프론트엔드의 핵심 영역을 중심으로 경험을 쌓아왔습니다.
+                저는 제품이 실제로 동작하고 확장되는 구조를 만드는 개발자입니다. Flutter 기반 모바일 개발에서 시작해
+                React와 Next.js 기반 웹 개발, NestJS 기반 백엔드 API, 서버사이드 결제 구조, 공통 모듈 설계까지
+                역할을 넓혀왔습니다.
             </p>
             <p class="summary about-copy">
-                개발을 하면서 좋은 프론트엔드는 화면을 만드는 것만으로 완성되지 않는다고 느꼈습니다. 실제 사용자 흐름에 맞는
-                구조를 설계하고, API와 데이터 모델을 이해한 상태에서 UI를 설계해야 제품이 자연스럽게 동작한다고 생각합니다.
-                그래서 UI 개발과 함께 기획 문서 작성, API 구조 설계, 데이터 모델 설계, 서버사이드 결제 전환과 같은
-                백엔드 중심 플로우 설계도 직접 맡아왔습니다.
+                개발을 하면서 좋은 제품은 화면만 잘 만들어서는 완성되지 않는다고 느꼈습니다. 사용자 흐름, API 계약,
+                데이터 모델, 결제 상태, 클라이언트 상태관리, 운영 검증이 서로 맞물려야 제품이 안정적으로 동작한다고 생각합니다.
+                그래서 요구사항을 화면 단위가 아니라 기능이 완성되는 전체 흐름으로 보고, 필요한 레이어의 구조를 직접 설계하고 구현해왔습니다.
             </p>
             <p class="summary about-copy">
-                최근에는 Claude API와 MCP를 활용해 디자인, 코드 생성, 테스트, 문서화 흐름을 자동화하는 개발 파이프라인도
-                구축했습니다. 저는 프론트엔드 개발자로서 사용자 경험에 가장 가까운 위치에서 일하되, 제품이 실제로 만들어지고
-                확장되는 과정 전체를 이해하는 개발자이고자 합니다.
+                최근에는 기획/SRS, WBS, 설계 산출물, 구현, 검증으로 이어지는 표준 개발 프로세스를 직접 정립하고,
+                Claude, Cursor, Codex 등 어떤 AI 에이전트에서도 이를 재현할 수 있는 개발 하네스를 구축했습니다.
+                앞으로도 특정 도메인이나 레이어에 갇히지 않고, 문제를 구조화하고 끝까지 작동하는 형태로 만드는 개발자로 일하고자 합니다.
             </p>
         </section>
     </main>
