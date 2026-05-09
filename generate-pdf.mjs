@@ -43,7 +43,8 @@ async function buildStandaloneHTML(htmlFile, fontCSS) {
   const htmlPath = resolve(__dirname, htmlFile);
   let html = readFileSync(htmlPath, 'utf-8');
 
-  const sharedCSS = readFileSync(resolve(__dirname, 'shared.css'), 'utf-8');
+  const isFormalResume = htmlFile === 'me.html';
+  const sharedCSS = isFormalResume ? '' : readFileSync(resolve(__dirname, 'shared.css'), 'utf-8');
   const pageCSS = readFileSync(resolve(__dirname, htmlFile.replace('.html', '.css')), 'utf-8');
 
   // img src를 base64로 임베드
@@ -61,7 +62,12 @@ async function buildStandaloneHTML(htmlFile, fontCSS) {
   const isPortfolio = htmlFile === 'portfolio.html';
   const contentWidth = isPortfolio ? 1120 : 860;
 
-  const printCSS = `
+  const printCSS = isFormalResume ? `
+    @page { size: A4; margin: 17mm 18mm; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+    html, body { width: auto !important; font-family: "Noto Sans KR", sans-serif !important; }
+    a { border-bottom: none !important; text-decoration: none !important; }
+  ` : `
     @page { size: ${isPortfolio ? 'A4 landscape' : 'A4'}; margin: 0; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     html, body { font-family: "Noto Sans KR", sans-serif !important; width: ${contentWidth}px !important; }
@@ -101,8 +107,9 @@ async function main() {
       const outName = file.replace('.html', '.pdf');
       console.log(`\n${file} → ${outName} 변환 중...`);
 
+      const isFormalResume = file === 'me.html';
       const isPortfolio = file === 'portfolio.html';
-      const contentWidth = isPortfolio ? 1120 : 860;  // resume.html도 860px 기준
+      const contentWidth = isPortfolio ? 1120 : isFormalResume ? 794 : 860;
       const standaloneHTML = await buildStandaloneHTML(file, fontCSS);
 
       const page = await browser.newPage();
@@ -113,7 +120,15 @@ async function main() {
 
       const pdfPath = resolve(__dirname, outName);
 
-      if (isPortfolio) {
+      if (isFormalResume) {
+        await page.pdf({
+          path: pdfPath,
+          format: 'A4',
+          printBackground: true,
+          margin: { top: '0', right: '0', bottom: '0', left: '0' },
+          preferCSSPageSize: true,
+        });
+      } else if (isPortfolio) {
         // landscape A4(297mm) 좌우 여백 20mm씩 → 가용 1047px
         const scale = 1047 / contentWidth;
         await page.pdf({

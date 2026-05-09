@@ -1,79 +1,248 @@
-.page {
-    max-width: 860px;
+* {
+    box-sizing: border-box;
 }
 
-.name {
-    font-size: 40px;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: #e9ecef;
+    color: #111;
+    font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+    font-size: 10pt;
+    line-height: 1.45;
 }
 
-.summary {
-    max-width: 60ch;
+a {
+    color: inherit;
+    text-decoration: none;
 }
 
-.about-copy {
-    max-width: none;
+@page {
+    size: A4;
+    margin: 17mm 18mm;
 }
 
-.section-title {
-    font-size: 22px;
+.document {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    padding: 18px 0;
 }
 
-.skills {
-    gap: 12px;
+.sheet {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    padding: 17mm 18mm;
+    background: #fff;
+    break-after: page;
+    page-break-after: always;
 }
 
-.skill-row {
-    grid-template-columns: 120px minmax(0, 1fr);
+.sheet:last-child {
+    break-after: auto;
+    page-break-after: auto;
 }
 
-.experience-item,
-.project-item,
-.education-item {
-    padding-bottom: 0;
+.profile-header {
+    display: grid;
+    grid-template-columns: 1fr 32mm;
+    gap: 14mm;
+    align-items: start;
+    margin-bottom: 8mm;
 }
 
-.experience-item + .experience-item,
-.project-item + .project-item,
-.education-item + .education-item {
-    margin-top: 26px;
-    padding-top: 26px;
-    border-top: 1px solid var(--line);
+.profile-main h1 {
+    margin: 0 0 1.5mm;
+    font-size: 25pt;
+    line-height: 1.08;
+    letter-spacing: 0;
 }
 
-.item-title {
-    font-size: 20px;
+.profile-main h1 span {
+    margin-left: 3mm;
+    color: #666;
+    font-size: 14pt;
+    font-weight: 500;
 }
 
-.icon-link {
-    color: var(--muted);
+.role {
+    margin: 0 0 5mm;
+    color: #555;
+    font-size: 9.4pt;
 }
 
-.icon-link:hover {
-    border-color: #999;
-    color: var(--text);
+.profile-photo {
+    width: 30mm;
+    height: 38mm;
+    object-fit: cover;
+    border: 1px solid #c7c7c7;
 }
 
-.item-highlights {
-    margin-top: 14px;
+.resume-section {
+    margin-top: 7mm;
 }
 
-.impact-line {
-    margin-top: 10px;
-    color: #1f2d3d;
-    font-size: 14px;
+.resume-section:first-child {
+    margin-top: 0;
+}
+
+.resume-section h2 {
+    margin: 0 0 3.5mm;
+    padding-bottom: 1.6mm;
+    border-bottom: 1.5px solid #111;
+    font-size: 12pt;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+.resume-section h3 {
+    margin: 0;
+    font-size: 10.8pt;
+    line-height: 1.25;
+}
+
+.resume-section p {
+    margin: 0 0 3mm;
+    font-size: 9.6pt;
+}
+
+.compact-list,
+.company-block ul {
+    margin: 0;
+    padding-left: 4.5mm;
+}
+
+.compact-list li,
+.company-block li {
+    margin: 0 0 1.4mm;
+    padding-left: 1mm;
+    font-size: 9.3pt;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+th,
+td {
+    border: 1px solid #b8b8b8;
+    padding: 1.8mm 2.2mm;
+    vertical-align: middle;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    font-size: 8.8pt;
+}
+
+thead th,
+.info-table th {
+    background: #f2f4f7;
     font-weight: 700;
-    letter-spacing: -0.01em;
 }
 
-@media (max-width: 720px) {
-    .name {
-        font-size: 32px;
+.info-table th {
+    width: 24mm;
+    text-align: left;
+}
+
+.info-table td {
+    font-size: 8.7pt;
+}
+
+.skill-table th:first-child {
+    width: 34mm;
+}
+
+.experience-table th,
+.experience-table td,
+.education-table th,
+.education-table td {
+    text-align: center;
+}
+
+.experience-table th:nth-child(1) {
+    width: 29mm;
+}
+
+.experience-table th:nth-child(2) {
+    width: 42mm;
+}
+
+.experience-table th:nth-child(3) {
+    width: 22mm;
+}
+
+.experience-table th:nth-child(4) {
+    width: 32mm;
+}
+
+.experience-table th:nth-child(5) {
+    width: 31mm;
+}
+
+.company-block {
+    margin-bottom: 7mm;
+}
+
+.company-block:last-child {
+    margin-bottom: 0;
+}
+
+.company-heading {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 8mm;
+    margin-bottom: 2mm;
+    padding-bottom: 1.5mm;
+    border-bottom: 1px solid #d4d4d4;
+}
+
+.company-heading span {
+    color: #555;
+    font-size: 8.8pt;
+    white-space: nowrap;
+}
+
+.tech-line {
+    margin-top: 2mm !important;
+    color: #555;
+    font-size: 8.6pt !important;
+}
+
+.continued {
+    margin-top: 0;
+}
+
+.project-block {
+    margin-bottom: 6mm;
+}
+
+@media print {
+    html,
+    body {
+        background: #fff;
     }
 
-    .item-header,
-    .skill-row {
-        grid-template-columns: 1fr;
-        display: grid;
-        gap: 4px;
+    .document {
+        display: block;
+        padding: 0;
+    }
+
+    .sheet {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0;
+        box-shadow: none;
+        break-after: auto;
+        page-break-after: auto;
+    }
+
+    .sheet + .sheet {
+        margin-top: 7mm;
     }
 }
