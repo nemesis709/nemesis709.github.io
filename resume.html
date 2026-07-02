@@ -46,14 +46,15 @@
         <section class="section">
             <h2 class="section-title">Overview</h2>
             <p class="section-intro">
-                Flutter 기반 모바일 개발에서 시작해 React, Next.js 기반 웹 개발, 서버사이드 결제 구조, 공통 모듈 설계,
-                표준 개발 프로세스 정립과 AI 에이전트 기반 개발 하네스 구축까지 역할을 확장해왔습니다. 특정 도메인이나 레이어에 갇히기보다
+                Flutter 기반 모바일 개발에서 시작해 React, Next.js 기반 웹 개발, 서버사이드 결제 구조, 자체 채팅 서버 내재화,
+                공통 모듈 설계, 표준 개발 프로세스 정립과 AI 에이전트 기반 개발 하네스 구축까지 역할을 확장해왔습니다. 특정 도메인이나 레이어에 갇히기보다
                 제품이 실제로 만들어지고 확장되는 과정 전체를 이해하는 개발자로 일하고 있습니다.
             </p>
             <ul class="list">
                 <li>모바일과 웹에서 시작해 백엔드 API, 데이터 모델, 결제 플로우까지 요구사항을 실행 가능한 구조와 코드로 바꿔왔습니다.</li>
                 <li>서비스 초기 개발, 신규 기능 출시, 웹 확장, 앱 런칭, 구조 리팩토링, 표준 개발 프로세스 설계까지 제품 전반을 다뤘습니다.</li>
                 <li>클라이언트사이드 결제를 서버사이드 결제 구조로 전환하며 주문 생성, 결제 검증, 트랜잭션 처리, 환불 정책까지 직접 설계하고 구현했습니다.</li>
+                <li>Sendbird 의존 채팅을 자체 서버로 전환하며 REST/WebSocket 분리, 메시지 정합성, 푸시, 운영 모니터링 구조를 구축했습니다.</li>
                 <li>화면, API, 데이터 모델, 결제, 상태관리, 공통 모듈의 경계를 나누고 책임이 유지되는 구조를 설계했습니다.</li>
                 <li>웹 MAU 8만 → 12만, 전체 MAU 25만+, 신규 서비스 런칭과 프로젝트 산출물 완성 시간 기준 개발 효율 약 60% 개선을 만들었습니다.</li>
             </ul>
@@ -74,7 +75,7 @@
                 </div>
                 <div class="skill-row">
                     <div class="skill-label">Backend</div>
-                    <div class="skill-value">NestJS, FastAPI, PostgreSQL, Supabase, REST API 설계, 데이터 모델 설계, 인증/결제 플로우 구현
+                    <div class="skill-value">NestJS, FastAPI, PostgreSQL, Supabase, REST API 설계, 데이터 모델 설계, 인증/결제/채팅 플로우 설계
                     </div>
                 </div>
                 <div class="skill-row">
@@ -84,7 +85,7 @@
                 </div>
                 <div class="skill-row">
                     <div class="skill-label">Platform / Infra</div>
-                    <div class="skill-value">AWS, Firebase, GitHub Actions, Fastlane, Python, C, Kotlin, Swift</div>
+                    <div class="skill-value">AWS, Firebase, GitHub Actions, Fastlane, Socket.IO, Redis Pub/Sub, Kafka, ECS Fargate, Python, C, Kotlin, Swift</div>
                 </div>
             </div>
         </section>
@@ -132,16 +133,18 @@
                         <li>문토 앱 내 기능으로 데이팅 서비스를 출시했습니다.</li>
                         <li>기존 클라이언트 사이드 결제를 서버사이드 결제 구조로 전환했습니다.</li>
                         <li>결제 검증, 트랜잭션 처리, 환불 정책 로직을 서버 기준으로 설계하고 구현했습니다.</li>
+                        <li>Sendbird 의존도를 낮추기 위해 REST/WebSocket 분리 기반의 자체 채팅 서버를 구축했습니다.</li>
                     </ul>
                 </div>
 
                 <div class="detail-block">
                     <h4 class="detail-title">Impact / Improvement</h4>
                     <ul class="list">
+                        <li>클라이언트가 결제 확정을 담당하던 구조를 서버 중심으로 전환해 결제 검증, 주문 상태 관리, 환불 정책을 서버 기준으로 일원화했습니다.</li>
+                        <li>1차 500명 규모 채팅 트래픽을 자체 서버로 분산해 월 약 300달러의 SaaS 비용을 절감했고, Phase 2에서 전체 30~50% 이관 시 월 약 1,700달러 추가 절감이 가능한 구조를 만들었습니다.</li>
                         <li>사용자 흐름 중심으로 웹 기능을 설계하고 반응형 UI를 구현했습니다.</li>
                         <li>모바일 MAU가 12만대에서 유지되는 상황에서 웹 확장을 통해 추가 사용자 유입을 만들었고,
                             웹 MAU 8만 → 12만, 전체 MAU 25만+ 규모로 확장됐습니다.</li>
-                        <li>클라이언트가 결제 확정을 담당하던 구조를 서버 중심으로 전환해 결제 검증, 주문 상태 관리, 환불 정책을 서버 기준으로 일원화했습니다.</li>
                         <li>기획/SRS → WBS → 설계(DBML, Swagger, TCL) → 구현 → 검증으로 이어지는 표준 개발 프로세스를 정립했습니다.</li>
                         <li>Claude, Cursor, Codex 등 어떤 AI 에이전트에서도 동일한 개발 흐름을 재현할 수 있는 하네스를 구축해 프로젝트 산출물 완성 시간 기준 개발 효율을 약 60% 개선했습니다.</li>
                     </ul>
@@ -150,8 +153,10 @@
                 <div class="detail-block">
                     <h4 class="detail-title">Architecture / System</h4>
                     <ul class="list">
-                        <li>Material Design 3 기반 크로스플랫폼 디자인 시스템 <strong>Muntorial</strong>을 설계하고 구축했습니다.</li>
+                        <li>서버사이드 결제 구조로 전환하며 주문 생성, 결제 검증, 트랜잭션 처리, 환불 정책의 책임을 서버 기준으로 재설계했습니다.</li>
+                        <li>자체 채팅 서버에서 REST 서버와 WebSocket 서버를 분리하고, PostgreSQL 메시지 저장, Redis Pub/Sub 기반 다중 노드 동기화, 메시지 ID 기반 순서 보장, 읽음 커서 기반 unread count, 푸시 SLA 구조를 구현했습니다.</li>
                         <li>React Query 캐시를 중심으로 서버 상태를 관리하고, Context API와 훅 기반 로컬 상태로 화면 책임을 분리했습니다.</li>
+                        <li>Material Design 3 기반 크로스플랫폼 디자인 시스템 Muntorial을 설계하고 구축했습니다.</li>
                         <li>AI 에이전트가 표준 개발 프로세스를 따르도록 공통 원본과 에이전트별 어댑터 구조를 설계했습니다.</li>
                         <li>현재 문토 앱 내 기능으로 운영 중인 데이팅 서비스를 별도 앱으로 분리하기 위해 공통 모듈 패키지 munto-core를 단독 설계하고 네트워크, 인증,
                             저장소, i18n 모듈을 구성했습니다.</li>

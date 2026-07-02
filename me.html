@@ -49,6 +49,7 @@
                     <li>모바일과 웹에서 시작해 백엔드 API, 데이터 모델, 결제 플로우까지 요구사항을 실행 가능한 구조와 코드로 전환합니다.</li>
                     <li>Flutter, React, Next.js, NestJS 기반으로 사용자 흐름과 서버 흐름을 함께 설계하고 구현합니다.</li>
                     <li>클라이언트사이드 결제를 서버사이드 결제 구조로 전환하며 주문 생성, 결제 검증, 트랜잭션 처리, 환불 정책을 직접 설계했습니다.</li>
+                    <li>Sendbird 의존 채팅을 자체 서버로 전환하며 REST/WebSocket 분리, 메시지 정합성, 푸시, 운영 모니터링 구조를 구축했습니다.</li>
                     <li>기획/SRS, WBS, DBML, Swagger, TCL, 구현, 검증으로 이어지는 표준 개발 프로세스를 정립했습니다.</li>
                     <li>AI 에이전트가 동일한 개발 흐름을 재현할 수 있도록 역할 기반 sub-agent orchestration과 개발 하네스를 구축했습니다.</li>
                 </ul>
@@ -74,7 +75,7 @@
                         </tr>
                         <tr>
                             <th>Backend / Data</th>
-                            <td>NestJS, FastAPI, PostgreSQL, Supabase, REST API, 인증/결제 플로우, 데이터 모델 설계</td>
+                            <td>NestJS, FastAPI, PostgreSQL, Supabase, REST API, 인증/결제/채팅 플로우, 데이터 모델 설계</td>
                         </tr>
                         <tr>
                             <th>Automation / AI</th>
@@ -82,7 +83,7 @@
                         </tr>
                         <tr>
                             <th>Platform / Infra</th>
-                            <td>AWS, Firebase, GitHub Actions, Fastlane</td>
+                            <td>AWS, Firebase, GitHub Actions, Fastlane, Socket.IO, Redis Pub/Sub, Kafka, ECS Fargate</td>
                         </tr>
                     </tbody>
                 </table>
@@ -175,6 +176,12 @@
                     필요한 레이어의 구조를 직접 설계하고 구현해왔습니다.
                 </p>
                 <p>
+                    최근에는 외부 채팅 솔루션 Sendbird에 의존하던 구조를 자체 채팅 서버로 전환했습니다. 자체 채팅 서버로
+                    1차 500명 규모 트래픽을 분산해 월 약 300달러의 SaaS 비용을 절감했고, Phase 2에서 전체 30~50% 이관 시 월 약 1,700달러 추가 절감이 가능한 구조를 만들었습니다.
+                    구현 과정에서는 REST 서버와 WebSocket 서버를 분리해 요청 처리와 실시간 연결의 책임을 나누고, 메시지 저장·순서 보장·읽음 처리·푸시 발송·백오피스 모니터링까지
+                    운영 가능한 채팅 흐름으로 연결했습니다.
+                </p>
+                <p>
                     최근에는 표준 개발 프로세스를 직접 정립하고 Claude, Cursor, Codex 등 어떤 AI 에이전트에서도 이를 재현할 수 있는 개발 하네스를
                     구축했습니다. 특정 도메인이나 레이어에 갇히지 않고 문제를 구조화하고 끝까지 작동하는 형태로 만드는 개발자로 일하고자 합니다.
                 </p>
@@ -194,11 +201,13 @@
                         <li>웹 플랫폼과 서비스 상세 페이지, 로그인/회원가입, 결제 흐름을 앱 경험과 연결되는 웹 경험으로 고도화했습니다.</li>
                         <li>웹 MAU 8만에서 12만으로 성장한 확장 구간에서 웹 유입 흐름과 핵심 화면을 구현했습니다.</li>
                         <li>클라이언트가 결제 확정을 담당하던 구조를 서버 중심으로 전환해 주문 상태 관리와 환불 정책을 서버 기준으로 일원화했습니다.</li>
+                        <li>Sendbird 의존도를 낮추기 위해 자체 채팅 서버를 구축하고 1차 500명 규모 트래픽을 이관해 월 약 300달러의 SaaS 비용을 절감했으며, Phase 2에서 월 약 1,700달러 추가 절감이 가능한 구조를 만들었습니다.</li>
+                        <li>REST 서버와 WebSocket 서버의 책임을 분리하고, 메시지 저장·순서 보장·읽음 처리·다중 노드 동기화가 하나의 채팅 흐름으로 동작하도록 구성했습니다.</li>
                         <li>Material Design 3 기반 크로스플랫폼 디자인 시스템 Muntorial을 설계하고 구축했습니다.</li>
                         <li>munto-core 공통 모듈을 설계해 네트워크, 인증, 저장소, i18n 책임을 분리했습니다.</li>
                         <li>표준 개발 프로세스와 AI 에이전트 하네스를 구축해 프로젝트 산출물 완성 시간 기준 개발 효율을 약 60% 개선했습니다.</li>
                     </ul>
-                    <p class="tech-line">기술: Flutter, React, Next.js, NestJS, React Query, TypeScript, PostgreSQL, Claude API, MCP</p>
+                    <p class="tech-line">기술: Flutter, React, Next.js, NestJS, React Query, TypeScript, PostgreSQL, Socket.IO, Redis Pub/Sub, Kafka, ECS Fargate, Claude API, MCP</p>
                 </article>
 
                 <article class="company-block">

@@ -92,3 +92,14 @@
         gap: 4px;
     }
 }
+
+@media print {
+    @page {
+        size: A4;
+        margin: 14mm 16mm;
+    }
+
+    .page {
+        padding: 0;
+    }
+}

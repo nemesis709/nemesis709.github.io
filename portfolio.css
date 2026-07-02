@@ -179,6 +179,75 @@
     font-weight: 600;
 }
 
+.chat-architecture {
+    display: grid;
+    gap: 12px;
+}
+
+.chat-arch-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.infra-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.chat-node {
+    min-height: 62px;
+    padding: 12px 10px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 800;
+    color: #252525;
+    background: #fafafa;
+}
+
+.chat-node span {
+    display: block;
+    margin-top: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #666;
+    line-height: 1.35;
+}
+
+.client-node {
+    background: #f7f7f7;
+}
+
+.server-node {
+    background: #f1f7f3;
+    border-color: #d8eadf;
+    color: #2f6a41;
+}
+
+.infra-node {
+    background: #f5f5f5;
+}
+
+.chat-arrow,
+.chat-arch-result {
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.chat-arrow {
+    background: #f0f0f0;
+    color: #444;
+}
+
+.chat-arch-result {
+    background: #f1f7f3;
+    color: #2f6a41;
+}
+
 .diagram-caption {
     margin: 14px 0 0;
     font-size: 14px;
@@ -214,7 +283,7 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 12px;
     margin-top: 14px;
-    max-width: 940px;
+    max-width: 760px;
 }
 
 .visual-flow-caption {
@@ -243,16 +312,25 @@
 .image-card img {
     display: block;
     width: 100%;
-    height: 300px;
+    height: 220px;
     object-fit: contain;
     border-radius: 8px;
     background: #fafafa;
 }
 
+.chart-crop-strip {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    max-width: none;
+}
+
+.chart-crop-strip .image-card {
+    padding: 8px;
+}
+
 .chart-crop-strip .image-card img {
-    height: 400px;
+    height: 360px;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 42%;
 }
 
 .image-card figcaption {
@@ -360,5 +438,37 @@ code {
 
     .case-block {
         padding: 14px 0;
+    }
+}
+
+@media print {
+    @page {
+        size: A4 landscape;
+        margin: 14mm 16mm;
+    }
+
+    .page {
+        padding: 0;
+    }
+
+    .case-study {
+        break-inside: avoid;
+    }
+
+    .diagram-card,
+    .case-block,
+    .image-card {
+        break-inside: avoid;
+    }
+
+    .chart-crop-strip {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        max-width: none;
+    }
+
+    .chart-crop-strip .image-card img {
+        height: 300px;
+        object-fit: cover;
+        object-position: center 42%;
     }
 }
