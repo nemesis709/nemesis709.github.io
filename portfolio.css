@@ -6,6 +6,42 @@
     font-size: 42px;
 }
 
+.hero-role {
+    margin: 0 0 10px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.hero-intro {
+    max-width: 760px;
+    margin: 18px 0 0;
+    color: #333;
+    font-size: 18px;
+    line-height: 1.75;
+    letter-spacing: -0.02em;
+}
+
+.hero-skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.hero-skills li {
+    padding: 6px 10px;
+    border: 1px solid #e4e4e4;
+    border-radius: 999px;
+    background: #fafafa;
+    color: #555;
+    font-size: 12px;
+    font-weight: 700;
+}
+
 .portfolio-title {
     margin: 0;
     font-size: 34px;
@@ -23,8 +59,45 @@
 }
 
 .intro-copy {
-    max-width: none;
+    max-width: 820px;
     margin-top: 18px;
+    color: #555;
+    font-size: 16px;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin: 26px 0 0;
+}
+
+.impact-card {
+    padding: 18px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: #fff;
+}
+
+.impact-card dt {
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.impact-card dd {
+    margin: 5px 0 0;
+    color: #222;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+}
+
+.impact-card p {
+    margin: 4px 0 0;
+    color: #777;
+    font-size: 12px;
 }
 
 .case-toc {
@@ -44,15 +117,55 @@
 
 .case-toc-list {
     margin: 10px 0 0;
-    padding-left: 20px;
+    padding: 0;
     display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 8px;
+    list-style: none;
+    counter-reset: case-index;
 }
 
 .case-toc-list li {
-    color: #4b4b4b;
+    counter-increment: case-index;
     font-size: 14px;
     color: #505050;
+}
+
+.case-toc-list a {
+    display: block;
+    height: 100%;
+    padding: 12px;
+    border: 0;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.case-toc-list a::before {
+    content: "0" counter(case-index);
+    display: block;
+    margin-bottom: 8px;
+    color: #999;
+    font-size: 11px;
+    font-weight: 800;
+}
+
+.case-toc-list a:hover,
+.case-toc-list a:focus-visible {
+    background: #f3f3f3;
+}
+
+.case-toc-list span {
+    display: block;
+    color: #2d2d2d;
+    font-weight: 800;
+}
+
+.case-toc-list small {
+    display: block;
+    margin-top: 4px;
+    color: #777;
+    font-size: 11px;
+    line-height: 1.5;
 }
 
 .case-study {
@@ -265,6 +378,14 @@
     letter-spacing: -0.04em;
 }
 
+.case-context {
+    margin: 0 0 8px;
+    color: #777;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
 .case-meta {
     margin: 10px 0 0;
     font-size: 13px;
@@ -391,6 +512,10 @@ code {
 }
 
 @media (max-width: 840px) {
+    .case-toc-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .case-block {
         grid-template-columns: 1fr;
         gap: 8px;
@@ -412,6 +537,35 @@ code {
 }
 
 @media (max-width: 720px) {
+    .hero-intro {
+        font-size: 16px;
+    }
+
+    .impact-grid,
+    .case-toc-list {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-card {
+        padding: 15px 16px;
+    }
+
+    .case-toc-list a {
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr);
+        column-gap: 8px;
+        align-items: start;
+    }
+
+    .case-toc-list a::before {
+        grid-row: 1 / span 2;
+        margin: 2px 0 0;
+    }
+
+    .case-toc-list small {
+        margin-top: 2px;
+    }
+
     .munto-comparison-strip {
         grid-template-columns: 1fr;
     }

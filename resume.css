@@ -6,6 +6,14 @@
     font-size: 42px;
 }
 
+.resume-role {
+    margin: 0 0 10px;
+    color: #666;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
 .section-title {
     font-size: 24px;
 }
