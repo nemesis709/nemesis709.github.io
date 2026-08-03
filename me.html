@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>김범진 이력서</title>
     <link rel="stylesheet" href="./me.css" />
+    <script src="./shared.js" defer></script>
 </head>
 
 <body>
@@ -14,12 +15,12 @@
             <header class="profile-header">
                 <div class="profile-main">
                     <h1>김범진 <span>Beomjin Kim</span></h1>
-                    <p class="role">Developer · Product / Web / Mobile / Backend / AI Development Process</p>
+                    <p class="role">풀스택 엔지니어 · 제품 설계와 개발 기준 수립</p>
                     <table class="info-table">
                         <tbody>
                             <tr>
                                 <th>총 경력</th>
-                                <td>5년 5개월</td>
+                                <td data-career-years data-career-years-value>5년 7개월</td>
                             </tr>
                             <tr>
                                 <th>Email</th>
@@ -44,45 +45,44 @@
             </header>
 
             <section class="resume-section">
-                <h2>핵심 역량 / Core Competencies</h2>
+                <h2>핵심 역량</h2>
                 <ul class="compact-list">
-                    <li>모바일과 웹에서 시작해 백엔드 API, 데이터 모델, 결제 플로우까지 요구사항을 실행 가능한 구조와 코드로 전환합니다.</li>
-                    <li>Flutter, React, Next.js, NestJS 기반으로 사용자 흐름과 서버 흐름을 함께 설계하고 구현합니다.</li>
-                    <li>클라이언트사이드 결제를 서버사이드 결제 구조로 전환하며 주문 생성, 결제 검증, 트랜잭션 처리, 환불 정책을 직접 설계했습니다.</li>
-                    <li>Sendbird 의존 채팅을 자체 서버로 전환하며 REST/WebSocket 분리, 메시지 정합성, 푸시, 운영 모니터링 구조를 구축했습니다.</li>
-                    <li>기획/SRS, WBS, DBML, Swagger, TCL, 구현, 검증으로 이어지는 표준 개발 프로세스를 정립했습니다.</li>
-                    <li>AI 에이전트가 동일한 개발 흐름을 재현할 수 있도록 역할 기반 sub-agent orchestration과 개발 하네스를 구축했습니다.</li>
+                    <li>비즈니스 목표와 출시 조건을 분석해 제품 전체의 요구사항을 실행 가능한 설계와 개발 기준으로 구체화합니다.</li>
+                    <li>클라이언트, 서버, 데이터와 인프라를 연결해 사용자 흐름과 운영 흐름을 함께 설계하고 구현합니다.</li>
+                    <li>결제 승인과 주문 상태의 불일치를 구조적 문제로 정의하고 결제 정책 협의부터 전체 흐름 구현까지 단독으로 수행했습니다.</li>
+                    <li>자체 채팅 시스템의 전체 구조를 설계하고 REST API 서버, React Native·Flutter 클라이언트, CDK 인프라를 구현했습니다.</li>
+                    <li>기획/SRS부터 설계, 구현, 검증까지 이어지는 개발 하네스를 설계해 팀 표준으로 정착시켰습니다.</li>
                 </ul>
             </section>
 
             <section class="resume-section">
-                <h2>기술스택 / Skill Set</h2>
+                <h2>기술</h2>
                 <table class="grid-table skill-table">
                     <thead>
                         <tr>
                             <th>구분</th>
-                            <th>Skill</th>
+                            <th>기술 및 경험</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th>Languages</th>
+                            <th>언어</th>
                             <td>Dart, TypeScript, JavaScript, Python, C, Kotlin, Swift</td>
                         </tr>
                         <tr>
-                            <th>Frontend / Mobile</th>
+                            <th>백엔드 / 데이터</th>
+                            <td>NestJS, FastAPI, PostgreSQL, Supabase, REST API, 인증·결제·채팅 흐름, 데이터 모델 설계</td>
+                        </tr>
+                        <tr>
+                            <th>프론트엔드 / 모바일</th>
                             <td>Flutter, React, Next.js, Riverpod, BLoC, React Query, Material Design 3</td>
                         </tr>
                         <tr>
-                            <th>Backend / Data</th>
-                            <td>NestJS, FastAPI, PostgreSQL, Supabase, REST API, 인증/결제/채팅 플로우, 데이터 모델 설계</td>
+                            <th>자동화 / AI</th>
+                            <td>Claude API, MCP, AI 개발 하네스, Figma/Swagger 기반 코드 생성, 테스트·문서화 자동화</td>
                         </tr>
                         <tr>
-                            <th>Automation / AI</th>
-                            <td>Claude API, MCP, AI Agent Harness, Figma/Swagger 기반 코드 생성, 테스트/문서화 자동화</td>
-                        </tr>
-                        <tr>
-                            <th>Platform / Infra</th>
+                            <th>플랫폼 / 인프라</th>
                             <td>AWS, Firebase, GitHub Actions, Fastlane, Socket.IO, Redis Pub/Sub, Kafka, ECS Fargate</td>
                         </tr>
                     </tbody>
@@ -90,7 +90,7 @@
             </section>
 
             <section class="resume-section">
-                <h2>경력 사항 / Work Experience</h2>
+                <h2>경력 사항</h2>
                 <table class="grid-table experience-table">
                     <thead>
                         <tr>
@@ -104,30 +104,30 @@
                     <tbody>
                         <tr>
                             <td>문토</td>
-                            <td>개발팀 / Developer</td>
-                            <td>1년 6개월</td>
+                            <td>개발팀 / 풀스택 엔지니어</td>
+                            <td data-current-company-tenure>1년 7개월</td>
                             <td>2024.12 ~ 재직 중</td>
-                            <td>웹/앱/백엔드/AI</td>
+                            <td>제품 설계/백엔드/웹/앱/AI</td>
                         </tr>
                         <tr>
                             <td>밀크코퍼레이션</td>
-                            <td>FE 개발팀 / Frontend Engineer</td>
+                            <td>FE 개발팀 / Flutter 엔지니어</td>
                             <td>4개월</td>
                             <td>2024.06 ~ 2024.09</td>
                             <td>모바일</td>
                         </tr>
                         <tr>
                             <td>세나클소프트</td>
-                            <td>클라이언트팀 / Flutter Engineer</td>
+                            <td>클라이언트팀 / Flutter 엔지니어</td>
                             <td>1년 7개월</td>
                             <td>2022.09 ~ 2024.03</td>
                             <td>헬스케어</td>
                         </tr>
                         <tr>
                             <td>위데이터랩</td>
-                            <td>개발팀 / Software Engineer</td>
+                            <td>개발팀 / 소프트웨어 엔지니어</td>
                             <td>2년</td>
-                            <td>2020.04 ~ 2022.04</td>
+                            <td>2020.04 ~ 2022.04.01</td>
                             <td>DB/리눅스/모바일</td>
                         </tr>
                     </tbody>
@@ -135,7 +135,7 @@
             </section>
 
             <section class="resume-section">
-                <h2>학력 / Education</h2>
+                <h2>학력</h2>
                 <table class="grid-table education-table">
                     <thead>
                         <tr>
@@ -165,47 +165,39 @@
 
         <section class="sheet">
             <section class="resume-section">
-                <h2>자기소개 / About Me</h2>
+                <h2>자기소개</h2>
                 <p>
-                    저는 제품이 실제로 동작하고 확장되는 구조를 만드는 개발자입니다. Flutter 기반 모바일 개발에서 시작해 React와 Next.js 기반 웹 개발,
-                    NestJS 기반 백엔드 API, 서버사이드 결제 구조, 공통 모듈 설계까지 역할을 넓혀왔습니다.
+                    제품의 불확실성을 분석하고, 비즈니스 목표를 실행 가능한 설계와 개발 기준으로 구체화하는 풀스택 엔지니어입니다.
+                    제품 전체의 흐름을 책임지며 출시 속도와 완성도 사이의 균형을 판단하고, 팀이 지속해서 개선할 수 있는 구조를 만듭니다.
                 </p>
                 <p>
-                    좋은 제품은 화면만 잘 만들어서는 완성되지 않는다고 생각합니다. 사용자 흐름, API 계약, 데이터 모델, 결제 상태, 클라이언트 상태관리,
-                    운영 검증이 서로 맞물려야 제품이 안정적으로 동작합니다. 그래서 요구사항을 화면 단위가 아니라 기능이 완성되는 전체 흐름으로 보고,
-                    필요한 레이어의 구조를 직접 설계하고 구현해왔습니다.
+                    기술적 완성도만을 목표로 삼기보다 시장의 시점과 실패 비용을 함께 고려합니다. 빠른 검증이 필요한 기능은 통제 가능한 범위에서 먼저 출시하고,
+                    안정성이 중요한 기능은 일정과 구조를 충분히 조율합니다. 불명확한 요구사항은 질문과 선택지로 문서화해 팀이 함께 실행할 수 있는 기준으로 만듭니다.
                 </p>
                 <p>
-                    최근에는 외부 채팅 솔루션 Sendbird에 의존하던 구조를 자체 채팅 서버로 전환했습니다. 자체 채팅 서버로
-                    1차 500명 규모 트래픽을 분산해 월 약 300달러의 SaaS 비용을 절감했고, Phase 2에서 전체 30~50% 이관 시 월 약 1,700달러 추가 절감이 가능한 구조를 만들었습니다.
-                    구현 과정에서는 REST 서버와 WebSocket 서버를 분리해 요청 처리와 실시간 연결의 책임을 나누고, 메시지 저장·순서 보장·읽음 처리·푸시 발송·백오피스 모니터링까지
-                    운영 가능한 채팅 흐름으로 연결했습니다.
-                </p>
-                <p>
-                    최근에는 표준 개발 프로세스를 직접 정립하고 Claude, Cursor, Codex 등 어떤 AI 에이전트에서도 이를 재현할 수 있는 개발 하네스를
-                    구축했습니다. 특정 도메인이나 레이어에 갇히지 않고 문제를 구조화하고 끝까지 작동하는 형태로 만드는 개발자로 일하고자 합니다.
+                    장기적으로는 비즈니스 기회를 스스로 제품으로 만들고 시장의 반응과 수익으로 검증할 수 있는 개발자를 지향합니다.
                 </p>
             </section>
 
             <section class="resume-section">
-                <h2>주요 경력 상세 / Professional Experience</h2>
+                <h2>주요 경력 상세</h2>
                 <article class="company-block">
                     <div class="company-heading">
                         <h3>문토</h3>
-                        <span>개발팀 / Developer · 2024.12 ~ 재직 중</span>
+                        <span>개발팀 / 풀스택 엔지니어 · 2024.12 ~ 재직 중</span>
                     </div>
                     <p>
-                        모바일 중심 서비스를 웹으로 확장하는 시점에서 디자인 시스템, 상태관리 구조, 서버사이드 결제 구조, 개발 자동화를 다시 설계했습니다.
+                        제품 전체의 기술 설계를 맡아 웹 확장, 결제 안정성, 자체 채팅 시스템과 팀의 개발 기준을 설계하고 구현했습니다.
                     </p>
                     <ul>
-                        <li>웹 플랫폼과 서비스 상세 페이지, 로그인/회원가입, 결제 흐름을 앱 경험과 연결되는 웹 경험으로 고도화했습니다.</li>
-                        <li>웹 MAU 8만에서 12만으로 성장한 확장 구간에서 웹 유입 흐름과 핵심 화면을 구현했습니다.</li>
-                        <li>클라이언트가 결제 확정을 담당하던 구조를 서버 중심으로 전환해 주문 상태 관리와 환불 정책을 서버 기준으로 일원화했습니다.</li>
-                        <li>Sendbird 의존도를 낮추기 위해 자체 채팅 서버를 구축하고 1차 500명 규모 트래픽을 이관해 월 약 300달러의 SaaS 비용을 절감했으며, Phase 2에서 월 약 1,700달러 추가 절감이 가능한 구조를 만들었습니다.</li>
+                        <li>메인, 모임 탐색·상세, 결제, 결제 내역까지 핵심 웹 흐름을 설계하고 구현했습니다. 별도 광고 없이 약 3개월간 웹 월간 활성 사용자가 8만에서 12만으로 증가했습니다.</li>
+                        <li>결제 승인과 주문 상태의 불일치 가능성을 분석해 구조적 원인을 찾고, 대표·기획과 정책을 확정한 뒤 클라이언트부터 서버·DB까지 단독으로 구현했습니다.</li>
+                        <li>2026년 3월 서버 중심 결제 구조 전환 이후 내부 결제 정합성 이슈 재발 0건을 유지하고 있습니다.</li>
+                        <li>Sendbird 의존도를 낮추기 위해 자체 채팅 시스템을 설계하고 Closer의 약 500개 활성 채팅방을 전환해 외부 서비스 비용을 월 약 300달러 절감했습니다.</li>
                         <li>REST 서버와 WebSocket 서버의 책임을 분리하고, 메시지 저장·순서 보장·읽음 처리·다중 노드 동기화가 하나의 채팅 흐름으로 동작하도록 구성했습니다.</li>
                         <li>Material Design 3 기반 크로스플랫폼 디자인 시스템 Muntorial을 설계하고 구축했습니다.</li>
                         <li>munto-core 공통 모듈을 설계해 네트워크, 인증, 저장소, i18n 책임을 분리했습니다.</li>
-                        <li>표준 개발 프로세스와 AI 에이전트 하네스를 구축해 프로젝트 산출물 완성 시간 기준 개발 효율을 약 60% 개선했습니다.</li>
+                        <li>표준 개발 프로세스와 AI 에이전트 하네스를 설계해 팀 표준으로 정착시켰고, 1~2개 사내 프로젝트에서 WBS 예상 일정 대비 산출물 완성 시간을 약 60% 단축했습니다.</li>
                     </ul>
                     <p class="tech-line">기술: Flutter, React, Next.js, NestJS, React Query, TypeScript, PostgreSQL, Socket.IO, Redis Pub/Sub, Kafka, ECS Fargate, Claude API, MCP</p>
                 </article>
@@ -213,7 +205,7 @@
                 <article class="company-block">
                     <div class="company-heading">
                         <h3>밀크코퍼레이션</h3>
-                        <span>FE 개발팀 / Frontend Engineer · 2024.06 ~ 2024.09</span>
+                        <span>FE 개발팀 / Flutter 엔지니어 · 2024.06 ~ 2024.09</span>
                     </div>
                     <p>
                         유아동 쇼핑 플랫폼 키즈닝에서 중고거래 기능 출시와 UI 성능 개선을 담당했습니다.
@@ -231,17 +223,17 @@
 
         <section class="sheet">
             <section class="resume-section continued">
-                <h2>주요 경력 상세 / Professional Experience</h2>
+                <h2>주요 경력 상세</h2>
                 <article class="company-block">
                     <div class="company-heading">
                         <h3>세나클소프트</h3>
-                        <span>클라이언트팀 / Flutter Engineer · 2022.09 ~ 2024.03</span>
+                        <span>클라이언트팀 / Flutter 엔지니어 · 2022.09 ~ 2024.03</span>
                     </div>
                     <p>
                         B2C 헬스케어 앱 클레와 모바일 환자차트를 0→1 런칭 단계부터 개발했습니다.
                     </p>
                     <ul>
-                        <li>혈압, 혈당, 키 등 건강 데이터를 공통 모델로 추상화해 CustomPainter 기반 차트 라이브러리를 개발했습니다.</li>
+                        <li>혈압, 체중, 신장, 혈당, BMI 데이터를 단일값과 복합값 인터페이스로 추상화하고 CustomPainter 기반 차트 시스템을 단독 설계·구현했습니다.</li>
                         <li>GestureDetector를 활용해 차트 줌인/줌아웃과 특정 날짜 선택 인터랙션을 구현했습니다.</li>
                         <li>건강 기록, 신체 측정, 생리 캘린더, 병원 예약 기능의 MVVM 구조와 클라이언트 로직을 개발했습니다.</li>
                         <li>EMR 연동과 모바일 환자차트 기능의 데이터 흐름과 클라이언트 구조를 개발했습니다.</li>
@@ -252,7 +244,7 @@
                 <article class="company-block">
                     <div class="company-heading">
                         <h3>위데이터랩</h3>
-                        <span>개발팀 / Software Engineer · 2020.04 ~ 2022.04</span>
+                        <span>개발팀 / 소프트웨어 엔지니어 · 2020.04 ~ 2022.04.01</span>
                     </div>
                     <p>
                         DB 모니터링 솔루션과 사내 앱 개발을 맡으며 시스템 레벨 통신 모듈부터 사내 도구와 Flutter 앱까지 작업했습니다.
@@ -269,7 +261,7 @@
             </section>
 
             <section class="resume-section">
-                <h2>주요 프로젝트 / Selected Projects</h2>
+                <h2>개인 프로젝트</h2>
                 <article class="company-block project-block">
                     <div class="company-heading">
                         <h3>aidy</h3>
@@ -288,7 +280,7 @@
                 <article class="company-block project-block">
                     <div class="company-heading">
                         <h3>ABO</h3>
-                        <span>KBO 실경기 데이터 기반 판타지 야구 웹 프로젝트 · 2024.08 ~ 2025.01</span>
+                        <span>KBO 실경기 데이터 기반 판타지 야구 웹 프로젝트 · 2024년 개발 · 2025 KBO 시범경기까지 운영</span>
                     </div>
                     <p>
                         드래프트로 구성한 라인업을 실제 KBO 경기 데이터에 연동해 승패를 겨루는 판타지 야구 웹 프로젝트입니다.
@@ -296,25 +288,10 @@
                     <ul>
                         <li>Statiz 데이터를 수집하고 선수 데이터베이스를 구축했습니다.</li>
                         <li>실경기 데이터를 게임 로직에 맞게 가공하는 데이터 파이프라인을 만들었습니다.</li>
-                        <li>웹페이지, 백엔드, 데이터베이스, 점수 계산 로직을 설계하고 약 1년간 운영했습니다.</li>
+                        <li>웹페이지, 백엔드, 데이터베이스, 점수 계산 로직을 설계하고 야구 동아리 구성원들과 2025 KBO 시범경기까지 운영했습니다.</li>
                     </ul>
                 </article>
 
-                <article class="company-block project-block">
-                    <div class="company-heading">
-                        <h3>AI Agent Harness</h3>
-                        <span>표준 개발 프로세스 기반 개발 하네스</span>
-                    </div>
-                    <p>
-                        기획/SRS, WBS, 설계 산출물, 구현, 검증으로 이어지는 표준 개발 프로세스를 정립하고 AI 에이전트가 이를 재현하도록 만든 개발 체계입니다.
-                    </p>
-                    <ul>
-                        <li>표준 개발 프로세스를 직접 설계하고, 공통 원본과 에이전트별 어댑터 구조로 분리했습니다.</li>
-                        <li>writer/reviewer 역할을 나누고 도메인별 sub-agent orchestration 구조를 구성했습니다.</li>
-                        <li>Claude, Cursor, Codex 등 어떤 AI 에이전트에서도 동일한 개발 흐름을 재현할 수 있게 만들었습니다.</li>
-                        <li>프로젝트 산출물 완성 시간 기준 개발 효율을 약 60% 개선했습니다.</li>
-                    </ul>
-                </article>
             </section>
         </section>
     </main>

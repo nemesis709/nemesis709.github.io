@@ -27,8 +27,23 @@ document.addEventListener("DOMContentLoaded", () => {
     const years = Math.floor(totalMonths / 12);
     const months = totalMonths % 12;
     const careerYearLabel = months === 0 ? `총 경력 ${years}년` : `총 경력 ${years}년 ${months}개월`;
+    const careerYearValue = months === 0 ? `${years}년` : `${years}년 ${months}개월`;
 
     careerYearNodes.forEach((node) => {
-        node.textContent = careerYearLabel;
+        node.textContent = node.hasAttribute("data-career-years-value") ? careerYearValue : careerYearLabel;
+    });
+
+    const currentCompanyTenureNodes = document.querySelectorAll("[data-current-company-tenure]");
+    const currentCompanyStartMonthIndex = 2024 * 12 + (12 - 1);
+    const currentMonthIndex = currentYear * 12 + (currentMonth - 1);
+    const currentCompanyMonths = currentMonthIndex - currentCompanyStartMonthIndex;
+    const currentCompanyYears = Math.floor(currentCompanyMonths / 12);
+    const currentCompanyRemainingMonths = currentCompanyMonths % 12;
+    const currentCompanyTenureLabel = currentCompanyRemainingMonths === 0
+        ? `${currentCompanyYears}년`
+        : `${currentCompanyYears}년 ${currentCompanyRemainingMonths}개월`;
+
+    currentCompanyTenureNodes.forEach((node) => {
+        node.textContent = currentCompanyTenureLabel;
     });
 });

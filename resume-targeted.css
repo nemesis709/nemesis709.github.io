@@ -1,0 +1,194 @@
+.target-badge {
+    display: inline-flex;
+    align-items: center;
+    margin: 0 0 12px;
+    padding: 5px 10px;
+    border-radius: 999px;
+    background: #eef3f8;
+    color: #29435f;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+}
+
+.target-badge.frontend {
+    background: #f3effa;
+    color: #543c74;
+}
+
+.headline {
+    margin: 14px 0 0;
+    max-width: 760px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.key-results {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.key-result {
+    padding: 14px 15px;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+}
+
+.key-result strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #1f2d3d;
+    font-size: 16px;
+}
+
+.key-result span {
+    display: block;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.focus-block {
+    margin-top: 18px;
+    padding-left: 16px;
+    border-left: 3px solid #8ea4b8;
+}
+
+.frontend-document .focus-block {
+    border-left-color: #a793bf;
+}
+
+.focus-title {
+    margin: 0 0 8px;
+    color: #26394c;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.frontend-document .focus-title {
+    color: #4f3b67;
+}
+
+.compact-experience .item-summary {
+    margin-top: 8px;
+}
+
+.compact-experience .list {
+    margin-top: 12px;
+}
+
+.document-note {
+    margin: 0 0 18px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@media (max-width: 720px) {
+    .key-results {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media print {
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+        line-height: 1.62;
+        zoom: 0.92;
+    }
+
+    .header {
+        padding-bottom: 20px;
+    }
+
+    .section {
+        padding-top: 24px;
+    }
+
+    .section + .section {
+        margin-top: 24px;
+        padding-top: 20px;
+    }
+
+    .section-title {
+        margin-bottom: 14px;
+        font-size: 21px;
+        break-after: avoid;
+        page-break-after: avoid;
+    }
+
+    .name {
+        font-size: 36px;
+    }
+
+    .headline,
+    .section-intro,
+    .list li,
+    .item-summary {
+        font-size: 13px;
+    }
+
+    .list li + li {
+        margin-top: 6px;
+    }
+
+    .experience-item + .experience-item,
+    .project-item + .project-item,
+    .education-item + .education-item {
+        margin-top: 22px;
+        padding-top: 22px;
+    }
+
+    .item-header,
+    .detail-title,
+    .focus-title,
+    .skill-row,
+    .key-result,
+    .project-item,
+    .education-item {
+        break-inside: avoid;
+    }
+
+    .item-header,
+    .detail-title,
+    .focus-title {
+        break-after: avoid;
+    }
+
+    .compact-experience {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+
+    .section:last-child {
+        margin-top: 16px;
+        padding-top: 14px;
+    }
+
+    .icon-links {
+        display: none;
+    }
+
+    .backend-document .headline {
+        margin-top: 10px;
+    }
+
+    .backend-document .meta {
+        margin-top: 12px;
+    }
+
+    .backend-document .key-results {
+        margin-top: 14px;
+    }
+
+    .backend-document .key-result {
+        padding: 10px 12px;
+    }
+
+    a {
+        border-bottom: 0;
+    }
+}
