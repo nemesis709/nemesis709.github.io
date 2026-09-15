@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Resume | Beomjin Kim | Tesla Application Support Engineer</title>
+    <title>Resume | Beomjin Kim | Tesla Staff Software Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap"
@@ -19,7 +19,7 @@
         <header class="header">
             <h1 class="name">Beomjin Kim</h1>
             <p class="role-title">Software Engineer — Backend Systems &amp; Production Reliability</p>
-            <p class="target-role">Target role: Senior Application Support Engineer, Sales & Delivery Applications</p>
+            <p class="target-role">Target role: Staff Software Engineer (Sales &amp; Delivery Application), Seoul, Korea</p>
             <div class="meta">
                 <span class="meta-item">
                     <img src="./assets/icons/profile.svg" alt="" />
@@ -48,23 +48,23 @@
         <section class="section">
             <h2 class="section-title">Professional Summary</h2>
             <p class="section-intro">
-                Software engineer with 5+ years of experience, including 3+ years across backend systems,
-                database workflows, production reliability, and operational tooling. I have designed and operated
-                production-facing order, payment, and real-time messaging systems where API contracts, data consistency,
-                observability, and deployment safety had to align. My strongest fit for Tesla is combining backend
-                development with incident-style problem solving, database/log-oriented analysis, and automation that
-                reduces repeated operational work and third-party dependency cost.
+                Software engineer with 5+ years of experience spanning backend systems, database workflows, production
+                reliability, and technical product delivery. I have led product and engineering decisions while
+                designing and operating customer-facing order, payment, and real-time messaging systems where business
+                requirements, API contracts, data consistency, observability, and deployment safety had to align. My
+                strongest fit for Tesla is combining hands-on engineering with end-to-end delivery, cross-functional
+                coordination, operational problem solving, and automation that supports business growth.
             </p>
         </section>
 
         <section class="section">
-            <h2 class="section-title">Fit for Tesla Application Support</h2>
+            <h2 class="section-title">Fit for Tesla Sales &amp; Delivery Applications</h2>
             <div class="fit-grid">
                 <div class="fit-item">
-                    <h3 class="fit-title">Production Issue Analysis</h3>
+                    <h3 class="fit-title">End-to-End Product Delivery</h3>
                     <p class="fit-copy">
-                        Redesigned a payment flow after analyzing double-payment, missing-order, timeout, and data
-                        consistency risks.
+                        Leading product direction, core algorithm improvement, and infrastructure/CI/CD readiness for
+                        a new consumer application launch.
                     </p>
                 </div>
                 <div class="fit-item">
@@ -81,10 +81,10 @@
                     </p>
                 </div>
                 <div class="fit-item">
-                    <h3 class="fit-title">Support Tooling and Automation</h3>
+                    <h3 class="fit-title">Observability and Automation</h3>
                     <p class="fit-copy">
-                        Built development automation, test generation flows, documentation automation, and internal
-                        viewer/tooling around logs and workflows.
+                        Implemented CloudWatch observability, blue-green deployment, internal diagnostic tooling, and
+                        automated development, testing, and documentation workflows.
                     </p>
                 </div>
                 <div class="fit-item">
@@ -101,10 +101,10 @@
             <h2 class="section-title">Skills</h2>
             <div class="skills">
                 <div class="skill-row">
-                    <div class="skill-label">Application Support</div>
+                    <div class="skill-label">Product / Program Delivery</div>
                     <div class="skill-value">
-                        Production issue analysis, root-cause-oriented debugging, containment design, long-term
-                        resolution planning, cross-functional communication
+                        Technical product ownership, requirements definition, prioritization, cross-functional
+                        coordination, release planning, end-to-end delivery
                     </div>
                 </div>
                 <div class="skill-row">
@@ -124,8 +124,8 @@
                 <div class="skill-row">
                     <div class="skill-label">Platform / Infra</div>
                     <div class="skill-value">
-                        AWS, Firebase, GitHub Actions, Fastlane, Socket.IO, Redis Pub/Sub, Kafka, ECS Fargate,
-                        networking fundamentals, databases, CI/CD, application monitoring concepts
+                        AWS, AWS CDK, ECS Fargate, CloudWatch, GitHub Actions, Fastlane, blue-green deployment,
+                        Socket.IO, Redis Pub/Sub, Kafka, CI/CD, production observability
                     </div>
                 </div>
                 <div class="skill-row">
@@ -162,8 +162,8 @@
                     <div class="item-period">2024.12 - Present</div>
                 </div>
                 <p class="item-summary">
-                    Worked across web, mobile, backend order/payment flows, common modules, and development automation
-                    while the product expanded from mobile-first usage to web and multi-service experiences.
+                    Owns backend and production-critical systems while contributing to product direction,
+                    cross-functional execution, and launch readiness across multiple consumer applications.
                 </p>
                 <p class="item-meta impact-line">Web MAU 80K to 120K, total MAU 250K+</p>
 
@@ -188,19 +188,21 @@
                 </div>
 
                 <div class="detail-block">
-                    <h4 class="detail-title">Application Architecture / Business Operations</h4>
+                    <h4 class="detail-title">Product Delivery / Application Architecture</h4>
                     <ul class="list">
+                        <li>Acts as technical product owner for a new dating application launch, aligning product
+                            direction with marketing execution, improving the core matching algorithm, and overseeing
+                            infrastructure and CI/CD readiness.</li>
                         <li>Separated server state with React Query cache and local UI state with hooks and Context API
                             to reduce coupling between business data and screen state.</li>
                         <li>Built and deployed an in-house chat service to production, replacing Sendbird, with separate
                             REST/WebSocket deployments, PostgreSQL persistence, Redis Pub/Sub multi-node synchronization,
                             message ordering, read-cursor unread counts, and push SLA design.</li>
                         <li>Load-tested the architecture for workloads targeting up to 100,000 users and configured AWS
-                            CloudWatch observability and blue-green deployments; operated it for 2–3 months without a
-                            server outage.</li>
+                            CloudWatch observability and blue-green deployments; operated it in production without a
+                            server outage since June 2026.</li>
                         <li>Migrated the first segment of approximately 500 active chat rooms, reducing SaaS cost by
-                            approximately $300/month and creating a path to an estimated additional $1,700/month
-                            reduction by migrating 30–50% of total chat usage.</li>
+                            approximately $300/month.</li>
                         <li>Designed the munto-core common package for shared network, authentication, token, storage,
                             logging, internationalization, Firebase, and chat SDK initialization modules.</li>
                     </ul>
@@ -272,9 +274,9 @@
                 </div>
             </article>
             <p class="keywords">
-                Keywords: application support, production support, order/payment systems, SQL, database analysis, REST
-                APIs, real-time messaging, Redis, Socket.IO, incident analysis, internal tools, automation,
-                cross-functional support.
+                Keywords: technical product ownership, end-to-end delivery, enterprise applications, order/payment
+                systems, SQL, database analysis, REST APIs, microservices, Redis, Kafka, Socket.IO, AWS, CI/CD,
+                observability, system integration, automation, cross-functional programs.
             </p>
         </section>
     </main>
