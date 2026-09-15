@@ -90,8 +90,8 @@
                 <div class="fit-item">
                     <h3 class="fit-title">Real-time System Design</h3>
                     <p class="fit-copy">
-                        Implemented and released an in-house chat service covering Socket.IO, Redis synchronization,
-                        message ordering, reconnect recovery, push routing, and staged cutover.
+                        Deployed an in-house chat service to production covering Socket.IO, Redis synchronization,
+                        message ordering, reconnect recovery, push routing, and staged migration from Sendbird.
                     </p>
                 </div>
             </div>
@@ -190,10 +190,10 @@
                             desktop web, and in-app webview contexts.</li>
                         <li>Separated server state with React Query cache and local UI state with hooks and Context API
                             to reduce coupling between business data and screen state.</li>
-                        <li>Built an in-house chat service replacing Sendbird,
+                        <li>Built and deployed an in-house chat service to production, replacing Sendbird,
                             including separate REST/WebSocket deployments, Socket.IO messaging, PostgreSQL persistence,
                             Redis Pub/Sub multi-node synchronization, message-id-based ordering, read-cursor unread
-                            counts, push SLA design, and staged cutover.</li>
+                            counts, push SLA design, and staged migration.</li>
                         <li>Shifted the first 500-user chat segment from Sendbird to the in-house service, reducing SaaS
                             cost by approximately $300/month in phase 1 and enabling an estimated additional
                             $1,700/month reduction in phase 2 by migrating 30-50% of total chat usage.</li>
