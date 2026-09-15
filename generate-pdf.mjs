@@ -68,7 +68,7 @@ async function buildStandaloneHTML(htmlFile, fontCSS) {
     html, body { width: auto !important; font-family: "Noto Sans KR", sans-serif !important; }
     a { border-bottom: none !important; text-decoration: none !important; }
   ` : `
-    @page { size: ${isPortfolio ? 'A4 landscape' : 'A4'}; margin: 0; }
+    @page { size: ${isPortfolio ? 'A4 landscape' : 'A4'}; margin: ${isPortfolio ? '0' : '14mm'}; }
     * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
     html, body { font-family: "Noto Sans KR", sans-serif !important; width: ${contentWidth}px !important; }
     .page { width: ${contentWidth}px !important; max-width: ${contentWidth}px !important; }
@@ -160,7 +160,8 @@ async function main() {
           format: 'A4',
           printBackground: true,
           scale,
-          margin: { top: `${marginMm}mm`, right: `${marginMm}mm`, bottom: `${marginMm}mm`, left: `${marginMm}mm` },
+          margin: { top: '0', right: '0', bottom: '0', left: '0' },
+          preferCSSPageSize: true,
         });
       }
 
