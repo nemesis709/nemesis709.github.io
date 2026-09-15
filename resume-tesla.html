@@ -178,8 +178,12 @@
                             resolve against the same order instead of creating inconsistent payment attempts.</li>
                         <li>Handled payment provider confirm timeouts with PROCESSING responses and order-status polling
                             instead of prematurely failing user-visible payment flows.</li>
-                        <li>Released the server-side payment structure and prevented recurrence of the same duplicate
-                            payment issue after launch.</li>
+                        <li>After rollout, no duplicate-payment incident attributable to the redesigned internal
+                            order/payment flow recurred; payment-provider incidents were isolated and handled
+                            separately.</li>
+                        <li>Supported payment operations for a service with approximately 15K total DAU and 8,000 weekly
+                            applications representing KRW 160M in weekly transaction volume; peak monthly transaction
+                            volume reached KRW 1B immediately after rollout.</li>
                     </ul>
                 </div>
 
