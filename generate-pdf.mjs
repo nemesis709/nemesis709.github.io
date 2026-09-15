@@ -103,7 +103,14 @@ async function main() {
   });
 
   try {
-    for (const file of ['me.html', 'portfolio.html', 'resume.html']) {
+    for (const file of [
+      'me.html',
+      'portfolio.html',
+      'resume.html',
+      'resume-backend.html',
+      'resume-frontend.html',
+      'resume-tesla.html',
+    ]) {
       const outName = file.replace('.html', '.pdf');
       console.log(`\n${file} → ${outName} 변환 중...`);
 
