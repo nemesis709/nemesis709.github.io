@@ -150,14 +150,17 @@ async function main() {
           margin: { top: '14mm', right: '20mm', bottom: '14mm', left: '20mm' },
         });
       } else {
-        // portrait A4(210mm) 좌우 여백 16mm씩 → 가용 748px
-        const scale = 748 / contentWidth;
+        // A4 실제 CSS 픽셀 폭(96dpi)을 기준으로 사방 14mm 여백을 확보한다.
+        const marginMm = 14;
+        const mmToCssPx = 96 / 25.4;
+        const availableWidthPx = (210 - marginMm * 2) * mmToCssPx;
+        const scale = availableWidthPx / contentWidth;
         await page.pdf({
           path: pdfPath,
           format: 'A4',
           printBackground: true,
           scale,
-          margin: { top: '14mm', right: '16mm', bottom: '14mm', left: '16mm' },
+          margin: { top: `${marginMm}mm`, right: `${marginMm}mm`, bottom: `${marginMm}mm`, left: `${marginMm}mm` },
         });
       }
 
