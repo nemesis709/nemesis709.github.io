@@ -151,7 +151,7 @@
                     <h4 class="detail-title">설계 및 구조</h4>
                     <ul class="list">
                         <li>서버사이드 결제 구조로 전환하며 주문 생성, 결제 검증, 트랜잭션 처리, 환불 정책의 책임을 서버 기준으로 재설계했습니다.</li>
-                        <li>자체 채팅 서버에서 REST 서버와 WebSocket 서버를 분리하고, PostgreSQL 메시지 저장, Redis Pub/Sub 기반 다중 노드 동기화, 메시지 ID 기반 순서 보장, 읽음 커서 기반 unread count, 푸시 SLA 구조를 구현했습니다.</li>
+                        <li>Sendbird를 대체하는 자체 채팅 서버를 프로덕션에 배포했습니다. REST 서버와 WebSocket 서버를 분리하고, PostgreSQL 메시지 저장, Redis Pub/Sub 기반 다중 노드 동기화, 메시지 ID 기반 순서 보장, 읽음 커서 기반 unread count, 푸시 SLA 구조를 구현했습니다.</li>
                         <li>React Query 캐시를 중심으로 서버 상태를 관리하고, Context API와 훅 기반 로컬 상태로 화면 책임을 분리했습니다.</li>
                         <li>Material Design 3 기반 크로스플랫폼 디자인 시스템 Muntorial을 설계하고 구축했습니다.</li>
                         <li>AI 에이전트가 표준 개발 프로세스를 따르도록 공통 원본과 에이전트별 어댑터 구조를 설계했습니다.</li>
