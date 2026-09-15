@@ -90,8 +90,8 @@
                 <div class="fit-item">
                     <h3 class="fit-title">Real-time System Design</h3>
                     <p class="fit-copy">
-                        Deployed an in-house chat service to production covering Socket.IO, Redis synchronization,
-                        message ordering, reconnect recovery, push routing, and staged migration from Sendbird.
+                        Deployed and operated an in-house chat service in production with load-tested scalability,
+                        CloudWatch observability, blue-green deployment, and no server outage over 2–3 months.
                     </p>
                 </div>
             </div>
@@ -188,13 +188,15 @@
                     <ul class="list">
                         <li>Separated server state with React Query cache and local UI state with hooks and Context API
                             to reduce coupling between business data and screen state.</li>
-                        <li>Built and deployed an in-house chat service to production, replacing Sendbird,
-                            including separate REST/WebSocket deployments, Socket.IO messaging, PostgreSQL persistence,
-                            Redis Pub/Sub multi-node synchronization, message-id-based ordering, read-cursor unread
-                            counts, push SLA design, and staged migration.</li>
-                        <li>Shifted the first 500-user chat segment from Sendbird to the in-house service, reducing SaaS
-                            cost by approximately $300/month in phase 1 and enabling an estimated additional
-                            $1,700/month reduction in phase 2 by migrating 30-50% of total chat usage.</li>
+                        <li>Built and deployed an in-house chat service to production, replacing Sendbird, with separate
+                            REST/WebSocket deployments, PostgreSQL persistence, Redis Pub/Sub multi-node synchronization,
+                            message ordering, read-cursor unread counts, and push SLA design.</li>
+                        <li>Load-tested the architecture for workloads targeting up to 100,000 users and configured AWS
+                            CloudWatch observability and blue-green deployments; operated it for 2–3 months without a
+                            server outage.</li>
+                        <li>Migrated the first segment of approximately 500 active chat rooms, reducing SaaS cost by
+                            approximately $300/month and creating a path to an estimated additional $1,700/month
+                            reduction by migrating 30–50% of total chat usage.</li>
                         <li>Designed the munto-core common package for shared network, authentication, token, storage,
                             logging, internationalization, Firebase, and chat SDK initialization modules.</li>
                     </ul>
