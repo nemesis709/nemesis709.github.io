@@ -97,20 +97,23 @@ async function main() {
   console.log('폰트 CSS 준비 완료');
 
   const browser = await puppeteer.launch({
-    executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+    executablePath: process.env.CHROME_PATH || '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox'],
   });
 
   try {
-    for (const file of [
+    const requestedFiles = process.argv.slice(2);
+    const files = requestedFiles.length > 0 ? requestedFiles : [
       'me.html',
       'portfolio.html',
       'resume.html',
       'resume-backend.html',
       'resume-frontend.html',
       'resume-tesla.html',
-    ]) {
+    ];
+
+    for (const file of files) {
       const outName = file.replace('.html', '.pdf');
       console.log(`\n${file} → ${outName} 변환 중...`);
 
